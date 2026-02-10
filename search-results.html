@@ -1,0 +1,666 @@
+<!-- =====================================================
+    SEARCH RESULTS PAGE - DESTINATION DETAILS
+    Display detailed information and photo gallery
+    ===================================================== -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sri Lanka Destination Details">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <title>Destination Details - Pearl of the Indian Ocean</title>
+    
+    <link rel="stylesheet" href="Home page.css">
+    <link rel="stylesheet" href="footer.css">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f5f5f5;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .results-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: #D4A574;
+            text-decoration: none;
+            margin-bottom: 30px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .back-link:hover {
+            gap: 12px;
+            color: #2C3E50;
+        }
+
+        .results-header {
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .results-header h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 48px;
+            color: #2C3E50;
+            margin-bottom: 10px;
+        }
+
+        .destination-meta {
+            display: flex;
+            gap: 30px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+            font-size: 16px;
+        }
+
+        .meta-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .meta-item i {
+            color: #D4A574;
+            font-size: 20px;
+        }
+
+        .results-description {
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .results-description h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 32px;
+            color: #2C3E50;
+            margin-bottom: 20px;
+        }
+
+        .results-description p {
+            font-size: 16px;
+            line-height: 1.8;
+            color: #555;
+            margin-bottom: 15px;
+        }
+
+        .attractions-list {
+            margin-top: 25px;
+        }
+
+        .attractions-list h3 {
+            color: #D4A574;
+            margin-bottom: 15px;
+            font-size: 18px;
+        }
+
+        .attractions-list ul {
+            list-style: none;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 12px;
+        }
+
+        .attractions-list li {
+            background: #f9f9f9;
+            padding: 12px 16px;
+            border-radius: 8px;
+            border-left: 4px solid #D4A574;
+            transition: all 0.3s ease;
+        }
+
+        .attractions-list li:hover {
+            background: #f0f0f0;
+            transform: translateX(5px);
+        }
+
+        .attractions-list li i {
+            color: #D4A574;
+            margin-right: 8px;
+        }
+
+        /* Photo Gallery Styles */
+        .gallery-section {
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .gallery-section h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 32px;
+            color: #2C3E50;
+            margin-bottom: 30px;
+        }
+
+        .photo-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 12px;
+            aspect-ratio: 1 / 1;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+            transition: all 0.3s ease;
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .gallery-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.5);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .gallery-item:hover .gallery-overlay {
+            opacity: 1;
+        }
+
+        .gallery-overlay i {
+            color: white;
+            font-size: 40px;
+        }
+
+        /* Lightbox Modal */
+        .lightbox {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.9);
+            z-index: 2000;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .lightbox.active {
+            display: flex;
+        }
+
+        .lightbox-content {
+            position: relative;
+            max-width: 90%;
+            max-height: 90%;
+        }
+
+        .lightbox-img {
+            max-width: 100%;
+            max-height: 80vh;
+            border-radius: 12px;
+        }
+
+        .lightbox-close {
+            position: absolute;
+            top: -40px;
+            right: 0;
+            color: white;
+            font-size: 32px;
+            cursor: pointer;
+            background: none;
+            border: none;
+            transition: transform 0.2s;
+        }
+
+        .lightbox-close:hover {
+            transform: scale(1.2);
+        }
+
+        .lightbox-nav {
+            position: absolute;
+            top: 50%;
+            color: white;
+            font-size: 28px;
+            cursor: pointer;
+            background: rgba(0,0,0,0.5);
+            width: 50px;
+            height: 50px;
+            border: none;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background 0.3s;
+        }
+
+        .lightbox-nav:hover {
+            background: rgba(0,0,0,0.8);
+        }
+
+        .lightbox-prev {
+            left: -60px;
+        }
+
+        .lightbox-next {
+            right: -60px;
+        }
+
+        /* Info Section */
+        .info-cta {
+            background: linear-gradient(135deg, #D4A574, #E8B4A0);
+            color: white;
+            padding: 40px;
+            border-radius: 12px;
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .info-cta h3 {
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+
+        .info-cta p {
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+
+        .info-cta-btn {
+            background: white;
+            color: #D4A574;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 25px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 16px;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .info-cta-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .results-header {
+                padding: 25px;
+            }
+
+            .results-header h1 {
+                font-size: 32px;
+            }
+
+            .results-description,
+            .gallery-section {
+                padding: 25px;
+            }
+
+            .photo-gallery {
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+                gap: 15px;
+            }
+
+            .destination-meta {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .lightbox-prev {
+                left: 10px;
+            }
+
+            .lightbox-next {
+                right: 10px;
+            }
+
+            .lightbox-close {
+                top: 20px;
+                right: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <header class="header">
+        <div class="header-logo">
+            <img src="./logo.png" alt="Pearl of the Indian Ocean Logo" class="logo-img">
+            <h2 class="brand-name">Pearl of the Indian Ocean</h2>
+        </div>
+        <nav class="navbar">
+            <ul class="nav-menu">
+                <li><a href="./Home page.html" class="nav-link">Home</a></li>
+                <li><a href="./information/Information.html" class="nav-link">Information</a></li>
+                <li><a href="./ToDoList/ToDo List.html" class="nav-link">Travel Plan</a></li>
+                <li><a href="./Contact Us/contactus.html" class="nav-link">Contact</a></li>
+                <li><a href="./About/About Us.html" class="nav-link">About</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+        <div class="header-social">
+            <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="results-container">
+        <a href="./Home page.html" class="back-link">
+            <i class="fas fa-arrow-left"></i>
+            Back to Home
+        </a>
+
+        <!-- Results Header -->
+        <div class="results-header" id="resultsHeader">
+            <h1 id="destinationName">Loading...</h1>
+            <div class="destination-meta" id="destinationMeta"></div>
+        </div>
+
+        <!-- Description Section -->
+        <div class="results-description" id="descriptionSection">
+            <h2>About This Destination</h2>
+            <p id="destinationDescription"></p>
+            <div class="attractions-list" id="attractionsContainer"></div>
+        </div>
+
+        <!-- Photo Gallery -->
+        <div class="gallery-section">
+            <h2>Photo Gallery</h2>
+            <div class="photo-gallery" id="photoGallery"></div>
+            <div class="info-cta">
+                <h3>Explore More Destinations</h3>
+                <p>Visit our Information page to discover more about Sri Lanka's nine provinces and their unique attractions.</p>
+                <a href="./information/Information.html" class="info-cta-btn">
+                    <i class="fas fa-compass"></i> Go to Information Page
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Lightbox Modal -->
+    <div class="lightbox" id="lightbox">
+        <div class="lightbox-content">
+            <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
+            <button class="lightbox-nav lightbox-prev" onclick="prevImage()">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <img src="" alt="" class="lightbox-img" id="lightboxImg">
+            <button class="lightbox-nav lightbox-next" onclick="nextImage()">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-column">
+                <h3><i class="fas fa-compass"></i> Pearl of the Indian Ocean</h3>
+                <p>Explore Sri Lanka's diverse destinations and create unforgettable travel memories.</p>
+                <div class="footer-social">
+                    <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+            <div class="footer-column">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="./Home page.html">Home</a></li>
+                    <li><a href="./Contact Us/contactus.html">Contact Us</a></li>
+                    <li><a href="./About/About Us.html">About Us</a></li>
+                    <li><a href="./ToDoList/ToDo List.html">Travel Planner</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Information</h4>
+                <ul>
+                    <li><a href="./information/Information.html">About Sri Lanka</a></li>
+                    <li><a href="./information/Information.html">Provinces</a></li>
+                    <li><a href="./information/Information.html">Culture</a></li>
+                    <li><a href="./information/Information.html">Travel Tips</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Newsletter</h4>
+                <p>Get Sri Lanka travel tips delivered to your inbox</p>
+                <form class="newsletter-form" onsubmit="return handleNewsletter(event)">
+                    <input type="email" placeholder="Your email" required>
+                    <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Pearl of the Indian Ocean. All Rights Reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+            <p style="margin-top: 10px; font-size: 12px; opacity: 0.7;">Powered by <strong>HiruNova-X</strong></p>
+        </div>
+    </footer>
+
+    <script>
+        let sriLankaData = null;
+        let currentImageIndex = 0;
+        let currentImages = [];
+
+        // Load database
+        async function loadDatabase() {
+            try {
+                const response = await fetch('./sri-lanka-database.json');
+                sriLankaData = await response.json();
+                displayDestinationDetails();
+            } catch (error) {
+                console.error('Error loading database:', error);
+            }
+        }
+
+        // Get destination from URL parameters
+        function getDestinationFromURL() {
+            const params = new URLSearchParams(window.location.search);
+            return params.get('destination');
+        }
+
+        // Display destination details
+        function displayDestinationDetails() {
+            const destinationName = getDestinationFromURL();
+            if (!destinationName) {
+                document.getElementById('destinationName').textContent = 'Destination not found';
+                return;
+            }
+
+            let foundPlace = null;
+            let foundProvince = null;
+
+            // Search for the destination
+            for (let province of sriLankaData.provinces) {
+                for (let place of province.places) {
+                    if (place.name.toLowerCase() === destinationName.toLowerCase()) {
+                        foundPlace = place;
+                        foundProvince = province;
+                        break;
+                    }
+                }
+                if (foundPlace) break;
+            }
+
+            if (!foundPlace) {
+                document.getElementById('destinationName').textContent = 'Destination not found';
+                return;
+            }
+
+            // Update header
+            document.getElementById('destinationName').textContent = foundPlace.name;
+
+            // Update meta information
+            const metaHTML = `
+                <div class="meta-item">
+                    <i class="fas fa-map-pin"></i>
+                    <strong>Province:</strong> ${foundProvince.name}
+                </div>
+                <div class="meta-item">
+                    <i class="fas fa-tag"></i>
+                    <strong>Category:</strong> ${foundPlace.category}
+                </div>
+                <div class="meta-item">
+                    <i class="fas fa-info-circle"></i>
+                    <strong>Type:</strong> Tourist Destination
+                </div>
+            `;
+            document.getElementById('destinationMeta').innerHTML = metaHTML;
+
+            // Update description
+            document.getElementById('destinationDescription').textContent = foundPlace.description;
+
+            // Update attractions
+            if (foundPlace.attractions && foundPlace.attractions.length > 0) {
+                const attractionsHTML = `
+                    <h3><i class="fas fa-star"></i> Top Attractions</h3>
+                    <ul>
+                        ${foundPlace.attractions.map(attr => `<li><i class="fas fa-check-circle"></i> ${attr}</li>`).join('')}
+                    </ul>
+                `;
+                document.getElementById('attractionsContainer').innerHTML = attractionsHTML;
+            }
+
+            // Load photos
+            currentImages = foundPlace.photos || [];
+            displayPhotoGallery();
+
+            // Update page title
+            document.title = `${foundPlace.name} - Pearl of the Indian Ocean`;
+        }
+
+        // Display photo gallery
+        function displayPhotoGallery() {
+            const gallery = document.getElementById('photoGallery');
+            gallery.innerHTML = '';
+
+            currentImages.forEach((photo, index) => {
+                const item = document.createElement('div');
+                item.className = 'gallery-item';
+                item.innerHTML = `
+                    <img src="${photo}" alt="Destination photo ${index + 1}" onerror="this.src='https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=500&h=400&fit=crop'">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                `;
+                item.addEventListener('click', () => openLightbox(index));
+                gallery.appendChild(item);
+            });
+        }
+
+        // Lightbox functions
+        function openLightbox(index) {
+            currentImageIndex = index;
+            const lightbox = document.getElementById('lightbox');
+            const img = document.getElementById('lightboxImg');
+            img.src = currentImages[index];
+            lightbox.classList.add('active');
+        }
+
+        function closeLightbox() {
+            document.getElementById('lightbox').classList.remove('active');
+        }
+
+        function nextImage() {
+            currentImageIndex = (currentImageIndex + 1) % currentImages.length;
+            document.getElementById('lightboxImg').src = currentImages[currentImageIndex];
+        }
+
+        function prevImage() {
+            currentImageIndex = (currentImageIndex - 1 + currentImages.length) % currentImages.length;
+            document.getElementById('lightboxImg').src = currentImages[currentImageIndex];
+        }
+
+        // Close lightbox on Escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') closeLightbox();
+            if (e.key === 'ArrowRight') nextImage();
+            if (e.key === 'ArrowLeft') prevImage();
+        });
+
+        // Close lightbox on background click
+        document.getElementById('lightbox').addEventListener('click', (e) => {
+            if (e.target.id === 'lightbox') closeLightbox();
+        });
+
+        // Newsletter function
+        function handleNewsletter(event) {
+            event.preventDefault();
+            const email = event.target.querySelector('input[type="email"]').value;
+            alert('Thank you for subscribing! Newsletter will be sent to ' + email);
+            event.target.reset();
+            return false;
+        }
+
+        // Hamburger menu toggle
+        document.querySelector('.hamburger').addEventListener('click', function() {
+            document.querySelector('.nav-menu').classList.toggle('active');
+            this.classList.toggle('active');
+        });
+
+        // Initialize
+        window.addEventListener('load', loadDatabase);
+    </script>
+</body>
+</html>

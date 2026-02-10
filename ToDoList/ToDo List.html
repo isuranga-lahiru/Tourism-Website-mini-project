@@ -1,111 +1,520 @@
+<!-- =====================================================
+    TRAVEL PLANNING APPLICATION - TODO LIST
+    Modern Vue.js App for Planning Sri Lanka Holidays
+    ===================================================== -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-
-  <!-- jquery for Bootstrap -->
-  <script
-  src="https://code.jquery.com/jquery-3.1.1.min.js"
-  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
-  crossorigin="anonymous"></script>
-
-  <!-- bootstrap -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js'></script>
-
-  <!-- font awesome -->
-  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
-
-  <!-- Vue.js script source -->
-  <script src="https://unpkg.com/vue/dist/vue.js"></script>
-
-  <style>
-    .taskDone {
-      text-decoration: line-through;
-    }
-    .container{
-      position: relative;
-    }
-    body{
-      background-color: blanchedalmond;
-    }
-  </style>
-  <link rel="stylesheet" href="./ToDoList.css">
-
-  <title>Todo List App</title>
+    <!-- Meta Information -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Plan your perfect Sri Lanka holiday with our interactive travel planning tool">
+    
+    <!-- Stylesheets & Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    
+    <!-- Header CSS from Home page -->
+    <link rel="stylesheet" href="../Home page.css">
+    
+    <!-- Vue.js -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    
+    <!-- Page Title -->
+    <title>Travel Planning - Sri Lanka Holiday Planner</title>
+    
+    <!-- Custom Stylesheet -->
+    <link rel="stylesheet" href="./ToDoList.css">
+    
+    <!-- Inline Styles for Todo App -->
+    <style>
+        body {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        .todo-wrapper {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+    </style>
 </head>
 <body>
-
-  <nav>
-    <ul>
-        <li><a href="../Home page.html">Home</a></li>
-        <li><a href="../information/Information.html">Information</a></li>
-        <li><a href="../ToDoList/ToDo List.html">To do List</a></li>
-        <li><a href="../Contact Us/contactus.html">Contact us</a></li>
-        <li><a href="../About/About Us.html">About us</a></li>
-    </ul>
-</nav>
-<div class="container col-sm-8 col-sm-offset-2">
-  <div id="taskApp">
-    <h1 style="margin-top:100px;">Plan Your Holidays In Sri-Lanka</h1>
-
-    <!-- Add new task form -->
-    <div class="panel panel-default">
-      <h2 class='text-center'>Add New Task</h2>
-
-      <form v-on:submit='addTask'>
-        <div class="col-sm-8">
-          <input type="text" class='form-control' v-model='tasks.name'>
+    <!-- ================================================
+         NAVIGATION BAR - STANDARDIZED
+         ================================================ -->
+    <header class="header">
+        <!-- Brand Logo Section -->
+        <div class="header-logo">
+            <img src="../logo.png" alt="Pearl of the Indian Ocean Logo" class="logo-img">
+            <h2 class="brand-name">Pearl of the Indian Ocean</h2>
         </div>
-
-        <div class="col-sm-4">
-          <input type="submit" value='Add' class='btn btn-primary btn-block'>
+        <!-- Navigation Menu -->
+        <nav class="navbar">
+            <ul class="nav-menu">
+                <li><a href="../Home page.html" class="nav-link">Home</a></li>
+                <li><a href="../information/Information.html" class="nav-link">Information</a></li>
+                <li><a href="../ToDoList/ToDo List.html" class="nav-link active">Travel Plan</a></li>
+                <li><a href="../Contact Us/contactus.html" class="nav-link">Contact</a></li>
+                <li><a href="../About/About Us.html" class="nav-link">About</a></li>
+            </ul>
+            <!-- Hamburger Menu Toggle for Mobile -->
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+        <!-- Social Media Links -->
+        <div class="header-social">
+            <a href="https://www.facebook.com/" target="_blank" title="Facebook"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.instagram.com/" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <a href="https://twitter.com/" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a>
         </div>
-      </form>
-      &nbsp;
+    </header>
+
+    <!-- ================================================
+         MAIN TRAVEL PLANNER APPLICATION
+         ================================================ -->
+    <div class="todo-wrapper">
+        <div id="app">
+            <!-- Page Header -->
+            <div class="planner-header">
+                <div class="header-content">
+                    <h1 class="page-title">
+                        <i class="fas fa-plane"></i> Plan Your Sri Lanka Adventure
+                    </h1>
+                    <p class="page-subtitle">Organize your travel activities and create your perfect itinerary</p>
+                </div>
+            </div>
+
+            <!-- Add New Task Section -->
+            <div class="add-task-section">
+                <h2 class="section-title">Add Activity to Your Plan</h2>
+                <form class="task-form" @submit.prevent="addTask">
+                    <div class="form-group">
+                        <input 
+                            type="text" 
+                            v-model="newTask.title" 
+                            class="form-control-custom"
+                            placeholder="Enter activity or destination (e.g., Visit Sigiriya Rock)"
+                            required
+                        >
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-col">
+                            <select v-model="newTask.category" class="form-control-custom">
+                                <option value="accommodation">🏨 Accommodation</option>
+                                <option value="sightseeing">👁️ Sightseeing</option>
+                                <option value="adventure">🎢 Adventure</option>
+                                <option value="food">🍲 Food & Dining</option>
+                                <option value="transport">🚗 Transport</option>
+                                <option value="shopping">🛍️ Shopping</option>
+                                <option value="other">📋 Other</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-col">
+                            <input 
+                                type="date" 
+                                v-model="newTask.date" 
+                                class="form-control-custom"
+                            >
+                        </div>
+                        
+                        <div class="form-col">
+                            <button type="submit" class="btn-add-task">
+                                <i class="fas fa-plus"></i> Add Activity
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div v-if="newTask.title" class="form-help-text">
+                        ✓ Press Enter or click "Add Activity" to add to your plan
+                    </div>
+                </form>
+            </div>
+
+            <!-- Statistics Section -->
+            <div class="stats-section" v-if="tasks.length > 0">
+                <div class="stat-card">
+                    <div class="stat-number">{{ tasks.length }}</div>
+                    <div class="stat-label">Total Activities</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">{{ completedTasks }}</div>
+                    <div class="stat-label">Completed</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">{{ remainingTasks }}</div>
+                    <div class="stat-label">Remaining</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">{{ Math.round(completionPercentage) }}%</div>
+                    <div class="stat-label">Progress</div>
+                </div>
+            </div>
+
+            <!-- Empty State Message -->
+            <div class="empty-state" v-if="tasks.length === 0">
+                <div class="empty-icon">
+                    <i class="fas fa-calendar-check"></i>
+                </div>
+                <h3>No Activities Yet!</h3>
+                <p>Start planning your Sri Lanka adventure by adding your first activity above.</p>
+            </div>
+
+            <!-- Tasks List Section -->
+            <div class="tasks-section" v-if="tasks.length > 0">
+                <!-- Filter Buttons -->
+                <div class="filter-buttons">
+                    <button 
+                        v-for="category in allCategories" 
+                        :key="category"
+                        @click="filterCategory = category"
+                        :class="{ active: filterCategory === category }"
+                        class="filter-btn"
+                    >
+                        {{ category === 'all' ? 'All Activities' : getCategoryEmoji(category) + ' ' + capitalize(category) }}
+                    </button>
+                </div>
+
+                <!-- Task Groups by Category -->
+                <div v-for="category in filteredCategories" :key="category" class="category-group">
+                    <h3 class="category-title">
+                        <span class="category-emoji">{{ getCategoryEmoji(category) }}</span>
+                        {{ capitalize(category) }}
+                        <span class="category-count">({{ getTasksByCategory(category).length }})</span>
+                    </h3>
+                    
+                    <!-- Individual Tasks -->
+                    <div class="tasks-list">
+                        <div 
+                            v-for="(task, index) in getTasksByCategory(category)" 
+                            :key="task.id"
+                            :class="{ completed: task.completed }"
+                            class="task-item"
+                        >
+                            <!-- Checkbox -->
+                            <div class="task-checkbox">
+                                <input 
+                                    type="checkbox" 
+                                    v-model="task.completed"
+                                    :id="'task-' + task.id"
+                                    class="checkbox-input"
+                                >
+                                <label :for="'task-' + task.id" class="checkbox-label"></label>
+                            </div>
+                            
+                            <!-- Task Content -->
+                            <div class="task-content">
+                                <p class="task-title">{{ task.title }}</p>
+                                <div class="task-meta">
+                                    <span v-if="task.date" class="task-date">
+                                        <i class="fas fa-calendar"></i> {{ formatDate(task.date) }}
+                                    </span>
+                                    <span class="task-priority" v-if="task.priority">
+                                        <i class="fas fa-flag"></i> {{ task.priority }}
+                                    </span>
+                                </div>
+                            </div>
+                            
+                            <!-- Action Buttons -->
+                            <div class="task-actions">
+                                <button 
+                                    @click="deleteTask(task.id)"
+                                    class="btn-action btn-delete"
+                                    title="Delete activity"
+                                >
+                                    <i class="fas fa-trash"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Completed Tasks Section -->
+                <div v-if="completedTasks > 0" class="category-group completed-group">
+                    <h3 class="category-title">
+                        <i class="fas fa-check-circle"></i> Completed Activities
+                        <span class="category-count">({{ completedTasks }})</span>
+                    </h3>
+                    <div class="tasks-list">
+                        <div 
+                            v-for="task in tasks.filter(t => t.completed)" 
+                            :key="task.id"
+                            class="task-item completed"
+                        >
+                            <div class="task-checkbox">
+                                <input 
+                                    type="checkbox" 
+                                    v-model="task.completed"
+                                    :id="'task-' + task.id"
+                                    class="checkbox-input"
+                                    checked
+                                >
+                                <label :for="'task-' + task.id" class="checkbox-label"></label>
+                            </div>
+                            <div class="task-content">
+                                <p class="task-title">{{ task.title }}</p>
+                                <div class="task-meta">
+                                    <span v-if="task.date" class="task-date">
+                                        <i class="fas fa-calendar"></i> {{ formatDate(task.date) }}
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="task-actions">
+                                <button 
+                                    @click="deleteTask(task.id)"
+                                    class="btn-action btn-delete"
+                                    title="Delete activity"
+                                >
+                                    <i class="fas fa-trash"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Clear Completed Tasks Button -->
+                <button 
+                    v-if="completedTasks > 0"
+                    @click="clearCompleted"
+                    class="btn-clear-completed"
+                >
+                    <i class="fas fa-broom"></i> Clear Completed Items
+                </button>
+            </div>
+        </div>
     </div>
 
-    <table class="table">
-      <thead>
-        <th>Checkmark Done</th>
-        <th>Task Name</th>
-        <th>Delete</th>
-      </thead>
+    <!-- ================================================
+         FOOTER
+         ================================================ -->
+    <footer class="footer-travel">
+        <div class="footer-content">
+            <!-- Footer Column 1: Brand Info -->
+            <div class="footer-column">
+                <h3><i class="fas fa-map-location-dot"></i> Pearl of the Indian Ocean</h3>
+                <p>Your trusted partner for planning the perfect Sri Lanka adventure with personalized travel itineraries.</p>
+                <div class="footer-social">
+                    <a href="https://www.facebook.com/" target="_blank" title="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://twitter.com/" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+            
+            <!-- Footer Column 2: Quick Links -->
+            <div class="footer-column">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="../Home page.html">Home</a></li>
+                    <li><a href="../information/Information.html">Information</a></li>
+                    <li><a href="../Contact Us/contactus.html">Contact Us</a></li>
+                    <li><a href="../About/About Us.html">About Us</a></li>
+                </ul>
+            </div>
+            
+            <!-- Footer Column 3: Contact Info -->
+            <div class="footer-column">
+                <h4>Contact Us</h4>
+                <p><strong>Email:</strong> info@pearlofindian.com</p>
+                <p><strong>Phone:</strong> +94 2314335</p>
+                <p><strong>Address:</strong> Colombo Road, Gampaha, Sri Lanka</p>
+            </div>
+            
+            <!-- Footer Column 4: Newsletter -->
+            <div class="footer-column">
+                <h4>Newsletter</h4>
+                <p>Get exclusive travel tips and special offers straight to your inbox</p>
+                <form class="newsletter-form-footer" onsubmit="return handleFooterNewsletter(event)">
+                    <input type="email" placeholder="Your email" required>
+                    <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                </form>
+                <p style="font-size: 12px; opacity: 0.8;">We respect your privacy. Unsubscribe at any time.</p>
+            </div>
+        </div>
+        
+        <!-- Footer Bottom -->
+        <div class="footer-bottom">
+            <p>&copy; 2025 Pearl of the Indian Ocean. All Rights Reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+            <p style="margin-top: 10px; font-size: 12px; opacity: 0.7;">Powered by <strong>HiruNova-X</strong></p>
+        </div>
+    </footer>
 
-      <tbody>
-        <tr v-for='task in tasks'>
-          <td><input type="checkbox" v-model="task.done"></td>
-          <td><span :class="{ taskDone: task.done }">{{ task.name }}</span></td>
-          <td><button class="btn btn-danger btn-block" v-on:click="deleteTask(task)">Delete</button></td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-</div>
+    <!-- ================================================
+         VUE.JS APPLICATION SCRIPT
+         ================================================ -->
+    <script>
+        const { createApp } = Vue;
 
-<script>
-var taskApp = new Vue({
-  el: '#taskApp',
-  data: {
-    tasks: [
-      
-    ]
-  },
-  methods: {
-    addTask: function(e) {
-      e.preventDefault();
-      this.tasks.push({
-        name: this.tasks.name,
-        done: false
-      });
-    },
-    deleteTask: function(task) {
-      this.tasks.splice(this.tasks.indexOf(task), 1)
-    }
-  }
-});
-</script>
+        // ========== MAIN APPLICATION COMPONENT ==========
+        /* Vue 3 Todo/Travel Planner App - Main component managing all tasks and logic */
+        createApp({
+            data() {
+                return {
+                    // Array to store all tasks/activities
+                    tasks: [],
+                    // Object to hold new task input data
+                    newTask: {
+                        title: '',
+                        category: 'sightseeing',
+                        date: '',
+                        priority: 'normal'
+                    },
+                    // Filter to show specific category
+                    filterCategory: 'all',
+                    // Counter for unique task IDs
+                    taskIdCounter: 1
+                }
+            },
+            computed: {
+                /* Calculate number of completed tasks */
+                completedTasks() {
+                    return this.tasks.filter(task => task.completed).length;
+                },
+                /* Calculate number of remaining tasks */
+                remainingTasks() {
+                    return this.tasks.length - this.completedTasks;
+                },
+                /* Calculate completion percentage */
+                completionPercentage() {
+                    if (this.tasks.length === 0) return 0;
+                    return (this.completedTasks / this.tasks.length) * 100;
+                },
+                /* Get all categories from tasks or default list */
+                allCategories() {
+                    const categories = [...new Set(this.tasks.map(t => t.category))];
+                    return ['all', ...categories];
+                },
+                /* Get categories to display based on filter */
+                filteredCategories() {
+                    if (this.filterCategory === 'all') {
+                        return [...new Set(this.tasks.map(t => t.category))];
+                    }
+                    return [this.filterCategory];
+                }
+            },
+            methods: {
+                /* Add new task to the list */
+                addTask() {
+                    if (this.newTask.title.trim() === '') {
+                        alert('Please enter an activity!');
+                        return;
+                    }
+
+                    // Create new task object
+                    const task = {
+                        id: this.taskIdCounter++,
+                        title: this.newTask.title,
+                        category: this.newTask.category,
+                        date: this.newTask.date,
+                        priority: this.newTask.priority,
+                        completed: false,
+                        createdAt: new Date()
+                    };
+
+                    // Add to tasks array
+                    this.tasks.push(task);
+
+                    // Reset form
+                    this.newTask = {
+                        title: '',
+                        category: 'sightseeing',
+                        date: '',
+                        priority: 'normal'
+                    };
+
+                    // Save to localStorage
+                    this.saveTasks();
+                },
+
+                /* Delete a task from the list */
+                deleteTask(taskId) {
+                    if (confirm('Are you sure you want to delete this activity?')) {
+                        this.tasks = this.tasks.filter(task => task.id !== taskId);
+                        this.saveTasks();
+                    }
+                },
+
+                /* Clear all completed tasks */
+                clearCompleted() {
+                    if (confirm('Delete all completed activities?')) {
+                        this.tasks = this.tasks.filter(task => !task.completed);
+                        this.saveTasks();
+                    }
+                },
+
+                /* Get tasks filtered by category */
+                getTasksByCategory(category) {
+                    return this.tasks.filter(task => task.category === category && !task.completed);
+                },
+
+                /* Get emoji for category */
+                getCategoryEmoji(category) {
+                    const emojis = {
+                        accommodation: '🏨',
+                        sightseeing: '👁️',
+                        adventure: '🎢',
+                        food: '🍲',
+                        transport: '🚗',
+                        shopping: '🛍️',
+                        other: '📋'
+                    };
+                    return emojis[category] || '📌';
+                },
+
+                /* Format date to readable string */
+                formatDate(dateString) {
+                    if (!dateString) return '';
+                    const options = { year: 'numeric', month: 'short', day: 'numeric' };
+                    return new Date(dateString).toLocaleDateString('en-US', options);
+                },
+
+                /* Capitalize first letter of string */
+                capitalize(str) {
+                    return str.charAt(0).toUpperCase() + str.slice(1);
+                },
+
+                /* Save tasks to browser localStorage */
+                saveTasks() {
+                    localStorage.setItem('travelTasks', JSON.stringify(this.tasks));
+                },
+
+                /* Load tasks from browser localStorage */
+                loadTasks() {
+                    const saved = localStorage.getItem('travelTasks');
+                    if (saved) {
+                        this.tasks = JSON.parse(saved);
+                        // Update taskIdCounter based on existing tasks
+                        if (this.tasks.length > 0) {
+                            this.taskIdCounter = Math.max(...this.tasks.map(t => t.id)) + 1;
+                        }
+                    }
+                }
+            },
+            /* Load tasks when component mounts */
+            mounted() {
+                this.loadTasks();
+                console.log('Travel Planner loaded');
+            }
+        }).mount('#app');
+
+        /* Handle footer newsletter subscription */
+        function handleFooterNewsletter(event) {
+            event.preventDefault();
+            const email = event.target.querySelector('input[type="email"]').value;
+            alert('Thank you for subscribing! You will receive travel tips at ' + email);
+            event.target.reset();
+            return false;
+        }
+    </script>
 </body>
 </html>

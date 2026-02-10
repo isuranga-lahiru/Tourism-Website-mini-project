@@ -1,216 +1,448 @@
+<!-- =====================================================
+    INFORMATION PAGE - Discover Sri Lanka
+    Geography, History, Culture, People & 9 Provinces
+    ===================================================== -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Meta Information -->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>pearl of indian ocean | information</title>
+    <meta name="description" content="Discover Sri Lanka's geography, rich history, diverse culture, welcoming people, and 9 beautiful provinces">
+    
+    <!-- Stylesheets & Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Header CSS from Home page -->
+    <link rel="stylesheet" href="../Home page.css">
+    
+    <!-- Page Title -->
+    <title>Information - Pearl of the Indian Ocean</title>
+    
+    <!-- Custom Stylesheet -->
     <link rel="stylesheet" href="./style-info.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
 <body>
-    <nav>
-        <ul>
-            <li><a href="../Home page.html">Home</a></li>
-            <li><a href="../information/Information.html">Information</a></li>
-            <li><a href="../ToDoList/ToDo List.html">To do List</a></li>
-            <li><a href="../Contact Us/contactus.html">Contact us</a></li>
-            <li><a href="../About/About Us.html">About us</a></li>
-        </ul>
-    </nav>
-    <div class="bck"></div>
+    <!-- Navigation Bar - Standardized -->
+    <header class="header">
+        <!-- Brand Logo Section -->
+        <div class="header-logo">
+            <img src="../logo.png" alt="Pearl of the Indian Ocean Logo" class="logo-img">
+            <h2 class="brand-name">Pearl of the Indian Ocean</h2>
+        </div>
+        <!-- Navigation Menu -->
+        <nav class="navbar">
+            <ul class="nav-menu">
+                <li><a href="../Home page.html" class="nav-link">Home</a></li>
+                <li><a href="../information/Information.html" class="nav-link active">Information</a></li>
+                <li><a href="../ToDoList/ToDo List.html" class="nav-link">Travel Plan</a></li>
+                <li><a href="../Contact Us/contactus.html" class="nav-link">Contact</a></li>
+                <li><a href="../About/About Us.html" class="nav-link">About</a></li>
+            </ul>
+            <!-- Hamburger Menu Toggle for Mobile -->
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+        <!-- Social Media Links -->
+        <div class="header-social">
+            <a href="https://www.facebook.com/" target="_blank" title="Facebook"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.instagram.com/" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <a href="https://twitter.com/" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a>
+        </div>
+    </header>
 
-    <div class="info">
-       <p> “Every Tourist In Sri Lanka Has A Unknown Mysterious And Fascinating Destination.”
-    </p>
-    </div>
-    <div class="geography" onclick="showGeo()">
-        <a href="#geo"><p>geography</p></a>
-    </div>
-    <div class="history" onclick="showHstr()">
-        <a href="#hstr"><p>history</p></a>
-    </div>
-    <div class="culture" onclick="showCltr()">
-        <a href="#cltr"><p>culture</p></a>
-    </div>
-    <div class="people" onclick="showPpl()">
-        <a href="#ppl"><p>people</p></a>
-    </div>
-    <div class="province" onclick="showProvince()">
-        <a href="#province"><p>province</p></a>
-    </div>
-    <div id="geo">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4047271.3097759066!2d78.46150524300964!3d7.851730507542297!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae2593cf65a1e9d%3A0xe13da4b400e2d38c!2sSri%20Lanka!5e0!3m2!1sen!2slk!4v1641479656102!5m2!1sen!2slk" 
-        width="500" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-         <p><span>Location</span> <br><br> Sri Lanka is a pearl-shaped Island nation in South Asia, lying on the Indian Plate, 
-            a major tectonic plate that was formerly part of the Indo-Australian Plate.It is in the Indian Ocean southwest of the Bay of Bengal, between latitudes 5° and 10° N, and longitudes 79° and 82° E. 
-            Sri Lanka is separated from the mainland portion of the Indian subcontinent by the Gulf of Mannar and Palk Strait. According to Hindu mythology, a land bridge existed between the Indian mainland and Sri Lanka. 
-            It now amounts to only a chain of limestone shoals remaining above sea level. Legends claim that it was passable on foot up to 1480 CE, until cyclones deepened the channel. Portions are still as shallow as 1 metre (3 ft), hindering navigation. 
-            The island consists mostly of flat to rolling coastal plains, with mountains rising only in the south-central part. 
-            The highest point is Pidurutalagala, reaching 2,524 metres (8,281 ft) above sea level.
-            <br><br><span><img src="./expand_less_black_24dp.svg"
-                onclick="showLessGeo()" class="igeo"></span>
-        </p> 
-    </div>
+    <!-- Hero Section -->
+    <section class="hero-info">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="hero-title">Discover Sri Lanka</h1>
+            <p class="hero-subtitle">"Every tourist in Sri Lanka has an unknown, mysterious and fascinating destination"</p>
+        </div>
+    </section>
 
-    <div id="hstr">
-        <img src="https://tinyurl.com/y6awsf83" alt="image" width="500px" height="300px" id="ihstr">
-        <p><span>History</span><br><br> The pre-history of Sri Lanka goes back 125,000 years and possibly even as far back as 500,000 years. 
-            According to the Mahāvamsa, a Pāḷi chronicle written in the 5th century CE, the original inhabitants of Sri Lanka are said to be the Yakshas and Nagas. 
-            Ancient cemeteries that were used before 600 BCE and other signs of advanced civilisation have also been discovered in Sri Lanka. 
-            Sinhalese history traditionally starts in 543 BCE with the arrival of Prince Vijaya, a semi-legendary prince who sailed with 700 followers to Sri Lanka, after being expelled from Vanga Kingdom .
-            The early modern period of Sri Lanka begins with the arrival of Portuguese soldier and explorer Lourenço de Almeida, the son of Francisco de Almeida, in 1505. In 1517, 
-            the Portuguese built a fort at the port city of Colombo and gradually extended their control over the coastal areas. 
-            On 14 February 1815, Kandy was occupied by the British in the second Kandyan War, ending Sri Lanka's independence. Sri Vikrama Rajasinha, 
-            the last native monarch of Sri Lanka, was exiled to India.
-            The Soulbury constitution ushered in dominion status, with independence proclaimed on 4 February 1948.
-            <br><br><span><img src="./expand_less_black_24dp.svg" onclick="showLessHstr()" class="ihstr"></span>
-        </p>
-    </div>
-    <div id="cltr">
-        <img src="./culture.jpeg" alt="image" width="500px" height="300px" id="icltr">
-        <p><span>Culture</span><br><br> The culture of Sri Lanka is influenced primarily by Buddhism and Hinduism. Sri Lanka is the home to two main traditional cultures: the Sinhalese (centred in Kandy and Anuradhapura) and the Tamil (centred in Jaffna). 
-            Tamils co-existed with the Sinhalese people since then, and the early mixing rendered the two ethnic groups almost physically indistinct. Ancient Sri Lanka is marked for its genius in hydraulic engineering and architecture. 
-            The British colonial culture has also influenced the locals. 
-            The rich cultural traditions shared by all Sri Lankan cultures is the basis of the country's long life expectancy, advanced health standards and high literacy rate. 
-            <br><br><span><img src="./expand_less_black_24dp.svg" onclick="showLessCltr()" class="icltr"></span>
-        </p>
-    </div>
-    <div id="ppl">
-        <img src="https://tinyurl.com/y4y2symc" alt="image" width="500px" height="300px" id="ippl">
-        <p><span>People</span><br><br> Sri Lanka is a multi-ethnic, multi-religious and multi-cultural society, a reflection of the island’s encounter with successive foreign immigrants. But it all began with indigenous people, the Veddahs, hunter-gatherers who exist today.
+    <!-- Navigation Tabs Section -->
+    <section class="nav-tabs-section">
+        <div class="nav-tabs">
+            <button class="tab-btn active" data-tab="geography">
+                <i class="fas fa-globe"></i> Geography
+            </button>
+            <button class="tab-btn" data-tab="history">
+                <i class="fas fa-history"></i> History
+            </button>
+            <button class="tab-btn" data-tab="culture">
+                <i class="fas fa-theater-masks"></i> Culture
+            </button>
+            <button class="tab-btn" data-tab="people">
+                <i class="fas fa-users"></i> People
+            </button>
+            <button class="tab-btn" data-tab="provinces">
+                <i class="fas fa-map" ></i> Provinces
+            </button>
+        </div>
+    </section>
 
-            The main ethnic groups are the Sinhalese and Tamils, both originally from the Indian subcontinent. Then there are Muslims, who settled in the island from the time it became an ancient trading centre. Similarly, Malays and Chinese were also attracted to the island.
+    <!-- Content Sections -->
+    <main class="info-content">
+        <!-- Geography Section -->
+        <section id="geography" class="info-section active">
+            <div class="section-container">
+                <div class="section-header">
+                    <h2 class="section-title"><i class="fas fa-globe"></i> Geography of Sri Lanka</h2>
+                    <div class="divider"></div>
+                </div>
+                <div class="section-body">
+                    <div class="content-with-media">
+                        <img src="../New folder/udara-karunarathna-MXY2UUe1C4g-unsplash.jpg" alt="Sri Lanka Geographic Landscape" style="border-radius: 8px; width: 100%; max-width: 500px; height: auto;" onerror="this.src='https://images.unsplash.com/photo-1512290923902-8a917ee9bcea?w=500&h=400&fit=crop'">
+                        <div class="text-content">
+                            <h3>The Pearl-Shaped Island</h3>
+                            <p><strong>Location:</strong> Sri Lanka is a pearl-shaped island nation situated in the Indian Ocean, approximately 32 km (20 miles) southwest of the Indian subcontinent. It lies between latitudes 6° and 10° N, and longitudes 80° and 87° E.</p>
+                            <p><strong>Size & Area:</strong> The island covers approximately 65,610 square kilometers (25,330 sq mi), making it the largest island in South Asia. Its coastline stretches for about 1,340 km (833 miles).</p>
+                            <p><strong>Terrain:</strong> The island features diverse landscapes including coastal plains, highlands, and central mountains. The highest peak is Pidurutalagala (Mount Pedro) at 2,524 meters (8,281 feet), located in the Central Province.</p>
+                            <p><strong>Climate:</strong> Sri Lanka has a tropical climate influenced by monsoons. The warm weather and abundant rainfall support diverse ecosystems including rainforests, tea plantations, and palm gardens.</p>
+                            <p><strong>Biodiversity:</strong> Home to unique wildlife including leopards, elephants, sloth bears, and endemic bird species. The island's biodiversity is protected through multiple national parks and reserves.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Sri Lanka Map Section -->
+                    <div class="map-section" style="margin-top: 40px;">
+                        <h3 style="text-align: center; margin-bottom: 20px; color: #2C3E50;">Interactive Map of Sri Lanka</h3>
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3962073.5287999987!2d80.77456!3d7.8731!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae2bf8a4f7d5555%3A0x500b6252ccb46e0!2sSri%20Lanka!5e0!3m2!1sen!2s!4v1642500000000" 
+                            width="100%" 
+                            height="450" 
+                            style="border: none; border-radius: 8px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                        <p style="text-align: center; margin-top: 15px; color: #666; font-size: 14px;">Explore Sri Lanka's geography, provinces, and major cities on the interactive map above</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- History Section -->
+        <section id="history" class="info-section">
+            <div class="section-container">
+                <div class="section-header">
+                    <h2 class="section-title"><i class="fas fa-history"></i> Ancient & Modern History</h2>
+                    <div class="divider"></div>
+                </div>
+                <div class="section-body">
+                    <div class="content-with-media">
+                        <img src="../New folder/jalitha-hewage-Dw2QYtzSNn0-unsplash.jpg" alt="Ancient Buddhist temple with ornate golden spire and intricate architecture, nestled among lush green mountains and misty valleys, symbolizing Sri Lanka's 2,300-year-old spiritual heritage and civilization" style="border-radius: 8px; width: 100%; max-width: 500px; height: auto;" onerror="this.src='https://images.unsplash.com/photo-1577720643272-265f434d5d22?w=500&h=400&fit=crop'">
+                        <div class="text-content">
+                            <h3>A Civilization Spanning Millennia</h3>
+                            <p><strong>Ancient Era (125,000+ years ago):</strong> Archaeological evidence suggests human settlement dating back 125,000 years, with possible occupation extending to 500,000 years ago. The indigenous Veddahs are among the world's oldest populations.</p>
+                            <p><strong>Sinhalese Kingdom (543 BCE):</strong> According to the Mahāvamsa chronicle, Prince Vijaya arrived in 543 BCE with 700 followers, establishing the foundations of Sinhalese civilization. Buddhism was introduced in the 3rd century and became the dominant religion.</p>
+                            <p><strong>Medieval & Colonial Periods:</strong> The island flourished as a major Buddhist center and sea trade hub. Portuguese arrived in 1505, followed by the Dutch (1517-1658), and finally the British (1795-1948) who unified the entire island.</p>
+                            <p><strong>Independence:</strong> Sri Lanka gained independence on February 4, 1948, becoming a sovereign nation. It adopted its current constitution in 1978.</p>
+                            <p><strong>Modern Era:</strong> The country has developed into a major tourist destination, offering visitors a blend of ancient Buddhist heritage, colonial architecture, and natural beauty.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Culture Section -->
+        <section id="culture" class="info-section">
+            <div class="section-container">
+                <div class="section-header">
+                    <h2 class="section-title"><i class="fas fa-theater-masks"></i> Rich Cultural Heritage</h2>
+                    <div class="divider"></div>
+                </div>
+                <div class="section-body">
+                    <div class="content-with-media">
+                        <img src="../New folder/chamindu-perera-9OO0Fg3_4MM-unsplash.jpg" alt="Sri Lankan Cultural Festival" style="border-radius: 8px; width: 100%; max-width: 500px; height: auto;" onerror="this.src='https://images.unsplash.com/photo-1549465110-18a20f2d5e9c?w=500&h=400&fit=crop'">
+                        <div class="text-content">
+                            <h3>Buddhism & Beyond</h3>
+                            <p><strong>Religion & Spirituality:</strong> Sri Lanka is predominantly Buddhist (70%), with Buddhism deeply embedded in the culture. Sacred sites like the Temple of the Tooth (Dalada Maligawa) attract pilgrims worldwide. Hinduism (13%), Islam (10%), and Christianity (7%) are also practiced.</p>
+                            <p><strong>Arts & Crafts:</strong> Traditional mask-making, wood carving, batik, and lacquerware are renowned. Ancient hydraulic engineering and architectural innovations showcase the island's historical ingenuity.</p>
+                            <p><strong>Festivals:</strong> Vesak (Buddhist New Year), Esala Perahera (grand temple festival with decorated elephants), and Tamil harvest festivals reflect the island's cultural diversity.</p>
+                            <p><strong>Cuisine:</strong> Sri Lankan food blends spices, coconut, and rice. Curries, hoppers, kottu roti, and lamprais represent the diverse culinary traditions influenced by Arab, Portuguese, Dutch, and British traders.</p>
+                            <p><strong>Languages:</strong> Sinhala (74%) and Tamil (18%) are the primary languages, with English widely spoken. The linguistic diversity reflects the island's multicultural heritage.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- People Section -->
+        <section id="people" class="info-section">
+            <div class="section-container">
+                <div class="section-header">
+                    <h2 class="section-title"><i class="fas fa-users"></i> Warm & Welcoming People</h2>
+                    <div class="divider"></div>
+                </div>
+                <div class="section-body">
+                    <div class="content-with-media">
+                        <img src="../New folder/mky-moody-75vaQlT_BY0-unsplash.jpg" alt="Sri Lankan Community" style="border-radius: 8px; width: 100%; max-width: 500px; height: auto;" onerror="this.src='https://images.unsplash.com/photo-1552776954-6b72afb63b98?w=500&h=400&fit=crop'">
+                        <div class="text-content">
+                            <h3>Multi-Ethnic & Multi-Cultural Society</h3>
+                            <p><strong>Ethnic Composition:</strong> Sri Lanka is home to Sinhalese (75%), Tamil (18%), and Muslim (8%) communities, creating a rich multicultural tapestry. Indigenous Veddahs represent the earliest inhabitants.</p>
+                            <p><strong>Historical Diversity:</strong> Centuries of trade and colonization brought Arabs, Portuguese, Dutch, British, and other traders, each leaving cultural imprints reflected in architecture, cuisine, and traditions.</p>
+                            <p><strong>Hospitality:</strong> Sri Lankans are renowned for exceptional warmth and hospitality. Visitors are often invited to homes for meals, and strangers are treated as guests, embodying the concept of "Suba Geethak" (auspicious welcome).</p>
+                            <p><strong>Social Values:</strong> Respect for elders, family bonds, and community cooperation are central values. Buddhism teaches compassion and non-violence, which deeply influence social customs and interactions.</p>
+                            <p><strong>Education & Development:</strong> Sri Lanka boasts a 93% literacy rate—the highest in South Asia—and significant advances in healthcare, evident in the population's long life expectancy.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Provinces Section -->
+        <section id="provinces" class="info-section">
+            <div class="section-container">
+                <div class="section-header">
+                    <h2 class="section-title"><i class="fas fa-map"></i> Nine Provinces of Sri Lanka</h2>
+                    <div class="divider"></div>
+                    <p class="section-subtitle">Each province offers unique attractions, culture, and natural beauty</p>
+                </div>
+                <div class="provinces-grid">
+                    <!-- Western Province -->
+                    <div class="province-card">
+                        <img src="../New folder/eddy-billard-d6EuGZs41SI-unsplash.jpg" alt="Colombo, Western Province" onerror="this.src='https://images.unsplash.com/photo-1577720643272-265f434d5d22?w=400&h=250&fit=crop&q=80'">
+                        <div class="province-info">
+                            <h3><i class="fas fa-city"></i> Western Province</h3>
+                            <p><strong>Capital:</strong> Colombo | <strong>Population:</strong> 5.8+ million (Most densely populated)</p>
+                            <p>The economic and administrative heart of Sri Lanka. Home to the Parliament in Sri Jayawardenepura Kotte. Features colonial architecture, beaches, shopping malls, and the iconic Galle Face Hotel.</p>
+                            <p><strong>Attractions:</strong> National Museum, Viharamahadevi Park, Mount Lavinia Beach</p>
+                        </div>
+                    </div>
+
+                    <!-- Central Province -->
+                    <div class="province-card">
+                        <img src="../New folder/thushal-madhushankha-Wak57_M4JKM-unsplash.jpg" alt="Kandy, Central Province" onerror="this.src='https://images.unsplash.com/photo-1548365328-c9403f173088?w=400&h=250&fit=crop&q=80'">
+                        <div class="province-info">
+                            <h3><i class="fas fa-mountain"></i> Central Province</h3>
+                            <p><strong>Capital:</strong> Kandy | <strong>Population:</strong> 2.5+ million | <strong>Area:</strong> 5,674 km²</p>
+                            <p>Located in the island's mountainous interior, known for tea plantations and scenic beauty. Home to the famous Sacred Temple of the Tooth, a UNESCO World Heritage site.</p>
+                            <p><strong>Attractions:</strong> Kandy Lake, Tea Plantations, Scenic Mountain Trains, Peradeniya Botanical Gardens</p>
+                        </div>
+                    </div>
+
+                    <!-- Southern Province -->
+                    <div class="province-card">
+                        <img src="../New folder/nilantha-sanjeewa-EXHIHvJu4VU-unsplash.jpg" alt="Galle, Southern Province" onerror="this.src='https://images.unsplash.com/photo-1586391606814-9a75e6dd2b45?w=400&h=250&fit=crop&q=80'">
+                        <div class="province-info">
+                            <h3><i class="fas fa-water"></i> Southern Province</h3>
+                            <p><strong>Capital:</strong> Galle | <strong>Population:</strong> 2.4+ million | <strong>Area:</strong> 5,544 km²</p>
+                            <p>Renowned for pristine beaches and historic towns. Features the iconic Galle Fort, a UNESCO World Heritage site. Popular destinations include Mirissa, Unawatuna, and Matara.</p>
+                            <p><strong>Attractions:</strong> Galle Fort, Whale Watching, Turtle Conservation, Beach Resorts</p>
+                        </div>
+                    </div>
+
+                    <!-- Eastern Province -->
+                    <div class="province-card">
+                        <img src="../New folder/riveen-manathunge-dN7eTDBAks4-unsplash.jpg" alt="Trincomalee, Eastern Province" onerror="this.src='https://images.unsplash.com/photo-1588439690066-86ef3a73e24b?w=400&h=250&fit=crop&q=80'">
+                        <div class="province-info">
+                            <h3><i class="fas fa-umbrella-beach"></i> Eastern Province</h3>
+                            <p><strong>Capital:</strong> Trincomalee | <strong>Population:</strong> 1.5+ million | <strong>Area:</strong> 9,996 km²</p>
+                            <p>Features spectacular natural harbors and mile-long beaches. Known for water sports, diving, and cultural diversity. Arugambe Beach is famous among surfers.</p>
+                            <p><strong>Attractions:</strong> Arugambe Beach (Surfing), Batticoloa Lagoon, Diving, Trincomalee Harbour</p>
+                        </div>
+                    </div>
+
+                    <!-- Northern Province -->
+                    <div class="province-card">
+                        <img src="../New folder/hayo-roskam-1FOA-Q7OZ1o-unsplash.jpg" alt="Jaffna, Northern Province" onerror="this.src='https://images.unsplash.com/photo-1569163139394-de4798aa62b3?w=400&h=250&fit=crop&q=80'">
+                        <div class="province-info">
+                            <h3><i class="fas fa-gopuram"></i> Northern Province</h3>
+                            <p><strong>Capital:</strong> Jaffna | <strong>Population:</strong> 1.0+ million | <strong>Area:</strong> 8,884 km²</p>
+                            <p>Known for rich Tamil cultural heritage and historical temples. The peninsula has a unique landscape and ancient sites. Home to the famous Nallur Kandaswamy Temple.</p>
+                            <p><strong>Attractions:</strong> Nallur Temple, Jaffna Fort, Naga Vihara, Island Hopping</p>
+                        </div>
+                    </div>
+
+                    <!-- North Central Province -->
+                    <div class="province-card">
+                        <img src="../New folder/Wilpattu-national-park-safari.jpg" alt="Anuradhapura, North Central Province" onerror="this.src='https://images.unsplash.com/photo-1585141349341-1f3842e31d15?w=400&h=250&fit=crop&q=80'">
+                        <div class="province-info">
+                            <h3><i class="fas fa-sitemap"></i> North Central Province</h3>
+                            <p><strong>Capital:</strong> Anuradhapura | <strong>Population:</strong> 1.2+ million | <strong>Area:</strong> 10,472 km² (Largest)</p>
+                            <p>Home to ancient Buddhist civilization with several UNESCO World Heritage sites. The Sacred Bo tree, planted 2,300 years ago, is one of the world's oldest trees.</p>
+                            <p><strong>Attractions:</strong> Anuradhapura Ancient City, Sacred Bo Tree, Polonnaruwa Ancient City</p>
+                        </div>
+                    </div>
+
+                    <!-- North Western Province -->
+                    <div class="province-card">
+                        <img src="../New folder/yves-alarie-yaGheETUSK4-unsplash.jpg" alt="Kurunegala, North Western Province" onerror="this.src='https://images.unsplash.com/photo-1546182990-dffeafbe841d?w=400&h=250&fit=crop&q=80'">
+                        <div class="province-info">
+                            <h3><i class="fas fa-tree"></i> North Western Province</h3>
+                            <p><strong>Capital:</strong> Kurunegala | <strong>Population:</strong> 2.3+ million | <strong>Area:</strong> 7,888 km²</p>
+                            <p>Emerging tourist destination with scenic beauty and cultural attractions. Known for paddy fields, coconut plantations, and traditional villages. Gateway to the north.</p>
+                            <p><strong>Attractions:</strong> Kurunegala Hill Fort, Dambadeniya Ancient Kingdom, Beaches, Colonial Towns</p>
+                        </div>
+                    </div>
+
+                    <!-- Sabaragamuwa Province -->
+                    <div class="province-card">
+                        <img src="../New folder/zip-line.jpg" alt="Ratnapura, Sabaragamuwa Province" onerror="this.src='https://images.unsplash.com/photo-1552776954-6b72afb63b98?w=400&h=250&fit=crop&q=80'">
+                        <div class="province-info">
+                            <h3><i class="fas fa-gem"></i> Sabaragamuwa Province</h3>
+                            <p><strong>Capital:</strong> Ratnapura | <strong>Population:</strong> 1.9+ million | <strong>Area:</strong> 4,968 km²</p>
+                            <p>Known as the "Gem Country" due to sapphire and gemstone mining. Features waterfalls, tea estates, and botanical gardens. Mountain scenery and adventure activities.</p>
+                            <p><strong>Attractions:</strong> Gem Mining, Waterfalls (Dunhinda, St. Clair), Tea Estates, Adventure</p>
+                        </div>
+                    </div>
+
+                    <!-- Uva Province -->
+                    <div class="province-card">
+                        <img src="../New folder/istockphoto-1285881901-170667a.jpg" alt="Badulla, Uva Province" onerror="this.src='https://images.unsplash.com/photo-1586391606814-9a75e6dd2b45?w=400&h=250&fit=crop&q=80'">
+                        <div class="province-info">
+                            <h3><i class="fas fa-cave"></i> Uva Province</h3>
+                            <p><strong>Capital:</strong> Badulla | <strong>Population:</strong> 1.2+ million | <strong>Area:</strong> 8,500 km²</p>
+                            <p>Located in the eastern highlands with spectacular scenery and natural attractions. Home to several important national parks and natural reserves. Famous for tea and spices.</p>
+                            <p><strong>Attractions:</strong> Dunhinda Falls, Diyaluma Falls, Yala NP, Gal Oya NP, Badulla Temple</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer-info">
+        <div class="footer-content">
+            <div class="footer-column">
+                <h3><i class="fas fa-compass"></i> Pearl of the Indian Ocean</h3>
+                <p>Explore Sri Lanka's diverse geography, rich history, vibrant culture, and warm hospitality through carefully curated information and travel guides.</p>
+                <div class="footer-social">
+                    <a href="https://www.facebook.com/" target="_blank" title="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://twitter.com/" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+            <div class="footer-column">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="../Home page.html">Home</a></li>
+                    <li><a href="../Contact Us/contactus.html">Contact Us</a></li>
+                    <li><a href="../About/About Us.html">About Us</a></li>
+                    <li><a href="../ToDoList/ToDo List.html">Travel Planner</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Learn More</h4>
+                <ul>
+                    <li><a href="#geography" data-tab="geography"><i class="fas fa-globe"></i> Geography</a></li>
+                    <li><a href="#history" data-tab="history"><i class="fas fa-history"></i> History</a></li>
+                    <li><a href="#culture" data-tab="culture"><i class="fas fa-theater-masks"></i> Culture</a></li>
+                    <li><a href="#people" data-tab="people"><i class="fas fa-users"></i> People</a></li>
+                    <li><a href="#provinces" data-tab="provinces"><i class="fas fa-map"></i> Provinces</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Newsletter</h4>
+                <p>Get Sri Lanka travel tips delivered to your inbox</p>
+                <form class="newsletter-form" onsubmit="return handleNewsletter(event)">
+                    <input type="email" placeholder="Your email" required>
+                    <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Pearl of the Indian Ocean. All Rights Reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+            <p style="margin-top: 10px; font-size: 12px; opacity: 0.7;">Powered by <strong>HiruNova-X</strong></p>
+        </div>
+    </footer>
+
+    <script>
+        // Tab switching functionality - Show relevant section when tab is clicked
+        document.querySelectorAll('.tab-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                // Remove active class from all tabs and sections
+                document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+                document.querySelectorAll('.info-section').forEach(s => s.classList.remove('active'));
+                
+                // Add active class to clicked tab and corresponding section
+                this.classList.add('active');
+                const tabName = this.getAttribute('data-tab');
+                document.getElementById(tabName).classList.add('active');
+                
+                // Scroll to content
+                document.querySelector('.info-content').scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+
+        // Smooth scroll for internal links
+        // Handle navigation tab clicks
+        document.querySelectorAll('.tab-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const tabName = this.getAttribute('data-tab');
+                const targetSection = document.getElementById(tabName);
+                
+                if (targetSection) {
+                    // Update all tab buttons
+                    document.querySelectorAll('.tab-btn').forEach(b => {
+                        b.classList.remove('active');
+                    });
+                    // Activate clicked button
+                    this.classList.add('active');
+                    // Smooth scroll to section
+                    targetSection.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+
+        // Handle footer "Learn More" links
+        document.querySelectorAll('.footer-column a[data-tab]').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const tabName = this.getAttribute('data-tab');
+                const targetSection = document.getElementById(tabName);
+                
+                if (targetSection) {
+                    // Update all tab buttons to show which section is active
+                    document.querySelectorAll('.tab-btn').forEach(btn => {
+                        btn.classList.remove('active');
+                        if (btn.getAttribute('data-tab') === tabName) {
+                            btn.classList.add('active');
+                        }
+                    });
+                    // Smooth scroll to section
+                    targetSection.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+
+        // Highlight active navigation on scroll
+        window.addEventListener('scroll', () => {
+            const sections = document.querySelectorAll('.info-section');
+            const navLinks = document.querySelectorAll('.tab-btn');
             
-            The Portuguese and British brought with them Kaffirs from Africa, and the Dutch an assortment of European traders, the Burghers. There are other communities too, the Chetties from South India for example. . . the list is extraordinary
-            
-            Whatever their situation in society, the people of Sri Lanka possess a warm and friendly nature reflected in persistent smiling faces and eagerness to help those unfamiliar with aspects of local life. 
-            You’ll find that Sri Lankans are very hospitable and take pride in inviting people to their homes, however modest they may be. So don’t be surprised if a driver or guide, or indeed virtually anyone encountered, requests the pleasure of your company. 
-            And don’t decline, as Sri Lankan hospitality is taken very seriously!
-            <br><br><span><img src="./expand_less_black_24dp.svg" onclick="showLessPpl()" class="ippl"></span>
-        </p> 
-    </div>
-    <div id="province">
-        <div id="sub0">
-            <p>Provinces</p>
-        </div>
-        <div class="sbcnt" id="sub1">
-            <img src="/information/galle.jpg" alt="galle" width="400px" height="200px">
-            <div class="desc">
-                <p>
-                    <span>southern province</span>
-                    It is the 7th largest province by area and is home to 2.5 million people, 
-                    the 3rd most populated province. The Province's capital is Galle.
-                    The Southern Province is a geographic area consisting of the districts of Galle, Matara and Hambantota.
-                </p>
-            </div>
-        </div>
-        <div class="sbcnt" id="sub2">
-            <img src="/information/colombo.jpg" alt="colombo" width="400px" height="200px">
-            <div class="desc">
-                <p>
-                    <span>Western province</span>
-                    The province is the most densely populated province in the country and is home to the legislative capital Sri Jayawardenepura Kotte as well to Colombo, 
-                    the nation's administrative and business center.
-                </p>
-            </div>
-        </div>
-        <div class="sbcnt" id="sub3">
-            <img src="/information/jaffna.jpg" alt="jaffna" width="400px" height="200px">
-            <div class="desc">
-                <p>
-                   <span>Northern province</span>
-                   The Northern is one of the nine provinces of Sri Lanka, the first level administrative division of the country. 
-                   The capital of the province is Jaffna. 
-                   The majority of the Sri Lankan Civil War was played out in this province.
-                </p>
-            </div>
-        </div>
-        <div class="sbcnt" id="sub4">
-            <img src="/information/anuradhapura.jpg" alt="anuradhapura" width="400px" height="200px">
-            <div class="desc">
-                <p>
-                    <span>North central province</span>
-                    The province is the largest by size, and second least populated in the country. 
-                    The province consists of the districts of Anuradhapura and Polonnaruwa, both of which were important ancient Sri Lankan kingdoms. 
-                    The climate is semi-arid, and the forests are dry evergreen forests.
-                </p>
-            </div>
-        </div>
-        <div class="sbcnt" id="sub5">
-            <img src="/information/kandy.jpg" alt="kandy" width="400px" height="200px">
-            <div class="desc">
-                <p>
-                   <span>central province</span>
-                   The Central Province is primarily in the central mountainous terrain of Sri Lanka. 
-                   It is the 6th largest province by area and is home to 2.5 million people. 
-                   It is bordered by North Central Province to the north, Uva Province to the east, North Western Province to the west and Sabaragamuwa Province to the south and west. 
-                   The province's capital is Kandy.
-                </p>
-            </div>
-        </div>
-        <div class="sbcnt" id="sub6">
-            <img src="/information/kegalle.jpg" alt="kegale" width="400px" height="200px">
-            <div class="desc">
-                <p>
-                    <span>Sabaragamuwa Province</span>
-                    The Sabaragamuwa Province contains two districts: Ratnapura and Kegalle. 
-                    It is named after its former indigenous inhabitants, namely the Sabara, an indic term for hunter-gatherer tribes, 
-                    a term seldom used in ancient Sri Lanka. 
-                </p>
-            </div>
-        </div>
-        <div class="sbcnt" id="sub7">
-            <img src="/information/monaragala.jpg" alt="uva" width="400px" height="200px">
-            <div class="desc">
-                <p>
-                    <span>Uva province</span>
-                    It consists of two districts: Badulla and Moneragala. The provincial capital is BadullaIts major tourist attractions are Dunhinda falls, Diyaluma Falls, Rawana Falls, 
-                    the Yala National Park and Gal Oya National park. 
-                    while the Mahaweli and Menik rivers and the huge Senanayake Samudraya and Maduru Oya Reservoirs are the major waterways.
-                </p>
-            </div>
-        </div>
-        <div class="sbcnt" id="sub8">
-            <img src="/information/puttalam.jpg" alt="north west" width="400px" height="200px">
-            <div class="desc">
-                <p>
-                    <span>North Western province</span>
-                    The province consists of the districts of Kurunegala and Puttalam. 
-                    Its capital is Kurunegala Other The province has an area of 7,888 km2, 
-                    and a population of 2,370,075.
-                </p>
-            </div>
-        </div>
-        <div class="sbcnt" id="sub9">
-            <img src="/information/TRINCOMALEE.jpg" alt="eastern" width="400px" height="200px">
-            <div class="desc">
-                <p>
-                   <span>Eastern province</span>
-                   It consists of two districts: Badulla and Moneragala. The provincial capital is BadullaIts major tourist attractions are Dunhinda falls, Diyaluma Falls, Rawana Falls, the Yala National Park and Gal Oya National park. 
-                   while the Mahaweli and Menik rivers and the huge Senanayake Samudraya and Maduru Oya Reservoirs are the major waterways.
-                </p>
-            </div>
-        </div>
-        <div id="arrow">
-            <p><img src="/information/expand_less_black_24dp.svg" onclick="showLessProvince()" class="arrow"></p>
-        </div>
-    </div>
-    <div class="footer">
-        <div class="footer_cnt">
-         <h4>Pearl Of Indian Ocean</h4>
-         <ul class="social">
-             <li><a href="#" target="_blank" id="facebook"><i class="fa fa-facebook"></i></a></li>
-             <li><a href="#" target="_blank" id="twitter"><i class="fa fa-twitter"></i></a></li>
-             <li><a href="#" target="_blank" id="linkedin"><i class="fa fa-linkedin-square"></i></a></li>
-             <li><a href="#" target="_blank" id="reddit"><i class="fa fa-reddit"></i></a></li>
-         </ul>
-        </div>
-        <div class="footer_bttm">
-            <p>copyright &copy;2022 pearl of indian ocean.design by <span>Isuranga</span></p>
-        </div>
-     </div>
-     <script src="info.js"></script>
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                if (pageYOffset >= sectionTop - 200) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('data-tab') === current) {
+                    link.classList.add('active');
+                }
+            });
+        });
+
+        /* Handle newsletter subscription */
+        function handleNewsletter(event) {
+            event.preventDefault();
+            const email = event.target.querySelector('input[type="email"]').value;
+            alert('Thank you for subscribing! Sri Lanka travel guides will be sent to ' + email);
+            event.target.reset();
+            return false;
+        }
+    </script>
 </body>
 </html>

@@ -1,0 +1,373 @@
+{
+  "provinces": [
+    {
+      "id": "western",
+      "name": "Western Province",
+      "capital": "Colombo",
+      "description": "Economic and administrative heart of Sri Lanka",
+      "places": [
+        {
+          "name": "Colombo City",
+          "description": "The capital city with colonial architecture, museums, and shopping malls",
+          "category": "Urban",
+          "attractions": ["National Museum", "Viharamahadevi Park", "Galle Face Hotel"],
+          "photos": [
+            "./New folder/eddy-billard-d6EuGZs41SI-unsplash.jpg",
+            "https://images.unsplash.com/photo-1577720643272-265f434d5d22?w=500&h=400&fit=crop",
+            "https://images.unsplash.com/photo-1548365328-c9403f173088?w=500&h=400&fit=crop"
+          ]
+        },
+        {
+          "name": "Mount Lavinia Beach",
+          "description": "Beautiful sandy beach near Colombo with water sports",
+          "category": "Beach",
+          "attractions": ["Beach Resort", "Water Sports", "Sunset Views"],
+          "photos": [
+            "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=500&h=400&fit=crop",
+            "https://images.unsplash.com/photo-1495521821757-a1efb6729352?w=500&h=400&fit=crop",
+            "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500&h=400&fit=crop"
+          ]
+        },
+        {
+          "name": "Negombo Lagoon",
+          "description": "Coastal town known for fishing villages and beach resorts",
+          "category": "Beach",
+          "attractions": ["Fish Markets", "Lagoon Boat Tours", "Beach Activities"],
+          "photos": [
+            "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=500&h=400&fit=crop",
+            "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500&h=400&fit=crop",
+            "https://images.unsplash.com/photo-1495521821757-a1efb6729352?w=500&h=400&fit=crop"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "central",
+      "name": "Central Province",
+      "capital": "Kandy",
+      "description": "Mountainous region famous for tea plantations and temples",
+      "places": [
+        {
+          "name": "Kandy City",
+          "description": "Cultural capital with the famous Temple of the Tooth",
+          "category": "Cultural",
+          "attractions": ["Temple of the Tooth", "Kandy Lake", "Traditional Dances"],
+          "photos": [
+            "./New folder/thushal-madhushankha-Wak57_M4JKM-unsplash.jpg",
+            "https://images.unsplash.com/photo-1548365328-c9403f173088?w=500&h=400&fit=crop",
+            "https://images.unsplash.com/photo-1577720643272-265f434d5d22?w=500&h=400&fit=crop"
+          ]
+        },
+        {
+          "name": "Nuwara Eliya",
+          "description": "Hill station with cool climate, gardens, and colonial architecture",
+          "category": "Hill Station",
+          "attractions": ["Gregory Lake", "Post Office", "Tea Plantations"],
+          "photos": [
+            "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=500&h=400&fit=crop",
+            "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=500&h=400&fit=crop",
+            "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=500&h=400&fit=crop"
+          ]
+        },
+        {
+          "name": "Tea Plantations",
+          "description": "Vast green tea estates with scenic mountain views",
+          "category": "Nature",
+          "attractions": ["Tea Factory Tours", "Hiking", "Local Markets"],
+          "photos": [
+            "https://images.unsplash.com/photo-1519046904884-53103b34b206?w=500&h=400&fit=crop",
+            "https://images.unsplash.com/photo-1464207687429-7505649dae38?w=500&h=400&fit=crop",
+            "https://images.unsplash.com/photo-1519046904884-53103b34b206?w=500&h=400&fit=crop"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "southern",
+      "name": "Southern Province",
+      "capital": "Galle",
+      "description": "Pristine beaches and historic coastal towns",
+      "places": [
+        {
+          "name": "Galle Fort",
+          "description": "UNESCO World Heritage site with historic fortifications",
+          "category": "Historical",
+          "attractions": ["Fort Walls", "Museum", "Lighthouse"],
+          "photos": [
+            "./New folder/nilantha-sanjeewa-EXHIHvJu4VU-unsplash.jpg",
+            "https://images.unsplash.com/photo-1586391606814-9a75e6dd2b45?w=500&h=400&fit=crop",
+            "https://images.unsplash.com/photo-1577720643272-265f434d5d22?w=500&h=400&fit=crop"
+          ]
+        },
+        {
+          "name": "Mirissa Beach",
+          "description": "Golden sandy beach popular with surfers and tourists",
+          "category": "Beach",
+          "attractions": ["Whale Watching", "Surfing", "Sunset"],
+          "photos": [
+            "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=500&h=400&fit=crop",
+            "https://images.unsplash.com/photo-1495521821757-a1efb6729352?w=500&h=400&fit=crop",
+            "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500&h=400&fit=crop"
+          ]
+        },
+        {
+          "name": "Unawatuna Beach",
+          "description": "Crescent-shaped beach with coral reefs and tropical fish",
+          "category": "Beach",
+          "attractions": ["Snorkeling", "Diving", "Beach Bars"],
+          "photos": [
+            "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=500&h=400&fit=crop",
+            "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500&h=400&fit=crop",
+            "https://images.unsplash.com/photo-1495521821757-a1efb6729352?w=500&h=400&fit=crop"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "eastern",
+      "name": "Eastern Province",
+      "capital": "Trincomalee",
+      "description": "Water sports and cultural diversity hotspot",
+      "places": [
+        {
+          "name": "Trincomalee",
+          "description": "Natural harbor with naval significance and beaches",
+          "category": "Beach",
+          "attractions": ["Whale Watching", "Diving", "Naval History"],
+          "photos": [
+            "./New folder/riveen-manathunge-dN7eTDBAks4-unsplash.jpg",
+            "https://images.unsplash.com/photo-1588439690066-86ef3a73e24b?w=500&h=400&fit=crop",
+            "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=500&h=400&fit=crop"
+          ]
+        },
+        {
+          "name": "Arugambe Beach",
+          "description": "Renowned surfing destination with laid-back atmosphere",
+          "category": "Beach",
+          "attractions": ["Surfing", "Yoga", "Beach Cafes"],
+          "photos": [
+            "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=500&h=400&fit=crop",
+            "https://images.unsplash.com/photo-1495521821757-a1efb6729352?w=500&h=400&fit=crop",
+            "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500&h=400&fit=crop"
+          ]
+        },
+        {
+          "name": "Batticoloa Lagoon",
+          "description": "Large lagoon with fishing villages and scenic views",
+          "category": "Nature",
+          "attractions": ["Boat Tours", "Bioluminescence", "Cinnamon Islands"],
+          "photos": [
+            "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=500&h=400&fit=crop",
+            "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500&h=400&fit=crop",
+            "https://images.unsplash.com/photo-1495521821757-a1efb6729352?w=500&h=400&fit=crop"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "northern",
+      "name": "Northern Province",
+      "capital": "Jaffna",
+      "description": "Rich Tamil cultural heritage and historical temples",
+      "places": [
+        {
+          "name": "Jaffna Peninsula",
+          "description": "Culturally significant region with ancient temples",
+          "category": "Cultural",
+          "attractions": ["Nallur Temple", "Fort Ruins", "Island Hopping"],
+          "photos": [
+            "./New folder/hayo-roskam-1FOA-Q7OZ1o-unsplash.jpg",
+            "https://images.unsplash.com/photo-1569163139394-de4798aa62b3?w=500&h=400&fit=crop",
+            "https://images.unsplash.com/photo-1577720643272-265f434d5d22?w=500&h=400&fit=crop"
+          ]
+        },
+        {
+          "name": "Nallur Temple",
+          "description": "Famous Hindu temple with golden corridors and murals",
+          "category": "Religious",
+          "attractions": ["Temple Festival", "Architecture", "Photography"],
+          "photos": [
+            "https://images.unsplash.com/photo-1564507592333-c60657eea523?w=500&h=400&fit=crop",
+            "https://images.unsplash.com/photo-1569163139394-de4798aa62b3?w=500&h=400&fit=crop",
+            "https://images.unsplash.com/photo-1577720643272-265f434d5d22?w=500&h=400&fit=crop"
+          ]
+        },
+        {
+          "name": "Point Pedro",
+          "description": "Northernmost point of Sri Lanka with beaches",
+          "category": "Beach",
+          "attractions": ["Lighthouse", "Sea Views", "Local Markets"],
+          "photos": [
+            "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=500&h=400&fit=crop",
+            "https://images.unsplash.com/photo-1495521821757-a1efb6729352?w=500&h=400&fit=crop",
+            "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500&h=400&fit=crop"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "north-central",
+      "name": "North Central Province",
+      "capital": "Anuradhapura",
+      "description": "Ancient Buddhist civilization and UNESCO heritage sites",
+      "places": [
+        {
+          "name": "Anuradhapura Ancient City",
+          "description": "UNESCO World Heritage site with ancient Buddhist ruins",
+          "category": "Historical",
+          "attractions": ["Sacred Bo Tree", "Dagobas", "Ancient Monasteries"],
+          "photos": [
+            "./New folder/Wilpattu-national-park-safari.jpg",
+            "https://images.unsplash.com/photo-1585141349341-1f3842e31d15?w=500&h=400&fit=crop",
+            "https://images.unsplash.com/photo-1577720643272-265f434d5d22?w=500&h=400&fit=crop"
+          ]
+        },
+        {
+          "name": "Polonnaruwa Ancient City",
+          "description": "Medieval capital with well-preserved ancient ruins",
+          "category": "Historical",
+          "attractions": ["Royal Palace", "Temples", "Museum"],
+          "photos": [
+            "https://images.unsplash.com/photo-1585141349341-1f3842e31d15?w=500&h=400&fit=crop",
+            "https://images.unsplash.com/photo-1577720643272-265f434d5d22?w=500&h=400&fit=crop",
+            "https://images.unsplash.com/photo-1548365328-c9403f173088?w=500&h=400&fit=crop"
+          ]
+        },
+        {
+          "name": "Wilpattu National Park",
+          "description": "Large national park with diverse wildlife and beautiful lakes",
+          "category": "Nature",
+          "attractions": ["Safari Tours", "Bird Watching", "Photography"],
+          "photos": [
+            "https://images.unsplash.com/photo-1516426122078-c23e76319801?w=500&h=400&fit=crop",
+            "https://images.unsplash.com/photo-1516426122078-c23e76319801?w=500&h=400&fit=crop",
+            "https://images.unsplash.com/photo-1516426122078-c23e76319801?w=500&h=400&fit=crop"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "north-western",
+      "name": "North Western Province",
+      "capital": "Kurunegala",
+      "description": "Scenic beauty with cultural attractions and natural landscapes",
+      "places": [
+        {
+          "name": "Kurunegala Hill Fort",
+          "description": "Historic hill fort with panoramic views",
+          "category": "Historical",
+          "attractions": ["Fort Remains", "Hiking", "Viewpoints"],
+          "photos": [
+            "./New folder/yves-alarie-yaGheETUSK4-unsplash.jpg",
+            "https://images.unsplash.com/photo-1546182990-dffeafbe841d?w=500&h=400&fit=crop",
+            "https://images.unsplash.com/photo-1577720643272-265f434d5d22?w=500&h=400&fit=crop"
+          ]
+        },
+        {
+          "name": "Dambadeniya",
+          "description": "Ancient capital with historic fortress ruins",
+          "category": "Historical",
+          "attractions": ["Ancient Kingdom", "Rock Fortress", "Carvings"],
+          "photos": [
+            "https://images.unsplash.com/photo-1585141349341-1f3842e31d15?w=500&h=400&fit=crop",
+            "https://images.unsplash.com/photo-1577720643272-265f434d5d22?w=500&h=400&fit=crop",
+            "https://images.unsplash.com/photo-1548365328-c9403f173088?w=500&h=400&fit=crop"
+          ]
+        },
+        {
+          "name": "Puttalam Lagoon",
+          "description": "Coastal lagoon with fishing villages and mangroves",
+          "category": "Nature",
+          "attractions": ["Bird Watching", "Photography", "Local Crafts"],
+          "photos": [
+            "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=500&h=400&fit=crop",
+            "https://images.unsplash.com/photo-1495521821757-a1efb6729352?w=500&h=400&fit=crop",
+            "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500&h=400&fit=crop"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sabaragamuwa",
+      "name": "Sabaragamuwa Province",
+      "capital": "Ratnapura",
+      "description": "Gem country with waterfalls and adventure activities",
+      "places": [
+        {
+          "name": "Ratnapura",
+          "description": "Gem mining capital with local gem market",
+          "category": "Cultural",
+          "attractions": ["Gem Mining", "Gem Museum", "Local Markets"],
+          "photos": [
+            "./New folder/zip-line.jpg",
+            "https://images.unsplash.com/photo-1552776954-6b72afb63b98?w=500&h=400&fit=crop",
+            "https://images.unsplash.com/photo-1577720643272-265f434d5d22?w=500&h=400&fit=crop"
+          ]
+        },
+        {
+          "name": "Dunhinda Falls",
+          "description": "Beautiful waterfall with scenic hiking trail",
+          "category": "Nature",
+          "attractions": ["Waterfall", "Hiking", "Photography"],
+          "photos": [
+            "https://images.unsplash.com/photo-1472395169895-9d455dd97e71?w=500&h=400&fit=crop",
+            "https://images.unsplash.com/photo-1472395169895-9d455dd97e71?w=500&h=400&fit=crop",
+            "https://images.unsplash.com/photo-1472395169895-9d455dd97e71?w=500&h=400&fit=crop"
+          ]
+        },
+        {
+          "name": "Hangman's Halt",
+          "description": "Adventure park with zip-lining and rope activities",
+          "category": "Adventure",
+          "attractions": ["Zip-lining", "Rope Courses", "Adventure Sports"],
+          "photos": [
+            "https://images.unsplash.com/photo-1433086747697-04e727fa7db2?w=500&h=400&fit=crop",
+            "https://images.unsplash.com/photo-1433086747697-04e727fa7db2?w=500&h=400&fit=crop",
+            "https://images.unsplash.com/photo-1433086747697-04e727fa7db2?w=500&h=400&fit=crop"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "uva",
+      "name": "Uva Province",
+      "capital": "Badulla",
+      "description": "Eastern highlands with scenic waterfalls and national parks",
+      "places": [
+        {
+          "name": "Ella",
+          "description": "Picturesque hill station with tea plantations and hiking",
+          "category": "Hill Station",
+          "attractions": ["Nine Arch Bridge", "Tea Plantations", "Hiking"],
+          "photos": [
+            "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=500&h=400&fit=crop",
+            "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=500&h=400&fit=crop",
+            "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=500&h=400&fit=crop"
+          ]
+        },
+        {
+          "name": "Dunhinda Falls",
+          "description": "Spectacular waterfall in misty mountains",
+          "category": "Nature",
+          "attractions": ["Waterfall", "Photography", "Trekking"],
+          "photos": [
+            "./New folder/istockphoto-1285881901-170667a.jpg",
+            "https://images.unsplash.com/photo-1472395169895-9d455dd97e71?w=500&h=400&fit=crop",
+            "https://images.unsplash.com/photo-1472395169895-9d455dd97e71?w=500&h=400&fit=crop"
+          ]
+        },
+        {
+          "name": "Yala National Park",
+          "description": "Wildlife sanctuary with leopards and diverse fauna",
+          "category": "Nature",
+          "attractions": ["Safari Tours", "Wildlife Viewing", "Photography"],
+          "photos": [
+            "https://images.unsplash.com/photo-1516426122078-c23e76319801?w=500&h=400&fit=crop",
+            "https://images.unsplash.com/photo-1516426122078-c23e76319801?w=500&h=400&fit=crop",
+            "https://images.unsplash.com/photo-1516426122078-c23e76319801?w=500&h=400&fit=crop"
+          ]
+        }
+      ]
+    }
+  ]
+}

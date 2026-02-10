@@ -1,40 +1,884 @@
-/*navigation bar*/
+/* =====================================================
+   TRAVEL PLANNER & TODO LIST - MODERN CSS
+   Beautiful UI for Travel Planning Application
+   ===================================================== */
 
-nav{
-    position: fixed;
-    width: 100%;
-    height: 80px;
-    top: 0;
-    left: 0;
-    background-color:rgba(0, 0,0, 0.4);
-    box-sizing: border-box;
-    border-bottom: 1px solid #fff;
-    z-index: 1;
-    
-}
-nav ul{
-    top: 50%;
-    list-style-type: none;
-    overflow: hidden;
-}
-
-nav ul li{
-    float: left;
+/* ==================== GLOBAL STYLES & ANIMATIONS ==================== */
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+/* Animated gradient background for professional tourism aesthetic */
+@keyframes gradientShift {
+    0% {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    }
+    50% {
+        background: linear-gradient(135deg, #764ba2 0%, #D4A574 100%);
+    }
+    100% {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    }
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* ==================== NAVIGATION BAR ==================== */
+/**
+ * Custom navbar styling for consistent navigation
+ * Provides branding and navigation links
+ */
+.navbar-custom {
+    background: white;
+    padding: 15px 50px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
     display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-nav li a{
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    border-radius: 20px;
+.nav-brand {
+    font-size: 20px;
+    font-weight: 700;
+    color: #2C3E50;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.nav-brand i {
+    font-size: 24px;
+    color: #D4A574;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    color: #2C3E50;
     text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    padding: 8px 12px;
+    border-radius: 5px;
 }
 
+.nav-links a:hover,
+.nav-links a.active {
+    color: #D4A574;
+    background-color: #F5F5F5;
+}
 
-li a:hover{
-    background-color: rgba(0, 0,0, 0.2);
+/* ==================== HEADER & PAGE TITLE ==================== */
+/**
+ * Planner header styling with title and subtitle
+ * Professional tourism aesthetic with animated gradient
+ */
+.planner-header {
+    animation: gradientShift 15s ease-in-out infinite;
+    color: white;
+    padding: 60px 20px;
+    border-radius: 15px;
+    margin-bottom: 40px;
+    text-align: center;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.header-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.page-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 44px;
+    font-weight: 700;
+    margin: 0 0 15px 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.page-subtitle {
+    font-size: 16px;
+    opacity: 0.9;
+    margin: 0;
+}
+
+/* ==================== ADD TASK SECTION ==================== */
+/**
+ * Form section for adding new activities/tasks
+ * Includes input fields and action buttons
+ */
+.add-task-section {
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    margin-bottom: 40px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 28px;
+    color: #2C3E50;
+    margin: 0 0 25px 0;
+    font-weight: 700;
+}
+
+.task-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-control-custom {
+    padding: 14px 16px;
+    border: 2px solid #E0E0E0;
+    border-radius: 8px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    transition: all 0.3s ease;
+}
+
+.form-control-custom:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.1);
+}
+
+.form-control-custom::placeholder {
+    color: #999;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+}
+
+.form-col {
+    display: flex;
+    flex-direction: column;
+}
+
+/**
+ * Submit button styling
+ */
+.btn-add-task {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    padding: 14px 24px;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 600;
     cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    height: 48px;
+}
+
+.btn-add-task:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+}
+
+.btn-add-task:active {
+    transform: translateY(0);
+}
+
+.form-help-text {
+    font-size: 13px;
+    color: #667eea;
+    margin-top: -15px;
+    font-weight: 500;
+}
+
+/* ==================== STATISTICS SECTION ==================== */
+/**
+ * Display stats about tasks (total, completed, remaining, progress)
+ */
+.stats-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.stat-card {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    border-left: 5px solid #667eea;
+}
+
+.stat-number {
+    font-size: 36px;
+    font-weight: 700;
+    color: #667eea;
+    margin-bottom: 8px;
+}
+
+.stat-label {
+    font-size: 14px;
+    color: #666;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* ==================== EMPTY STATE ==================== */
+/**
+ * Display when no tasks exist yet
+ */
+.empty-state {
+    background: white;
+    padding: 80px 40px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    margin: 40px 0;
+}
+
+.empty-icon {
+    font-size: 80px;
+    color: #DDD;
+    margin-bottom: 20px;
+    animation: float 3s ease-in-out infinite;
+}
+
+.empty-state h3 {
+    font-size: 24px;
+    color: #2C3E50;
+    margin: 0 0 10px 0;
+    font-weight: 600;
+}
+
+.empty-state p {
+    color: #999;
+    font-size: 15px;
+    margin: 0;
+}
+
+/**
+ * Floating animation for empty state icon
+ */
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}
+
+/* ==================== TASKS SECTION ==================== */
+/**
+ * Container for all tasks and filters
+ */
+.tasks-section {
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+/* Category Filter Buttons */
+.filter-buttons {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    padding: 10px 20px;
+    background: #F5F5F5;
+    border: 2px solid #E0E0E0;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    font-size: 14px;
+}
+
+.filter-btn:hover {
+    border-color: #667eea;
+    color: #667eea;
+}
+
+.filter-btn.active {
+    background: #667eea;
+    color: white;
+    border-color: #667eea;
+}
+
+/* Category Group Styling */
+.category-group {
+    margin-bottom: 40px;
+}
+
+.category-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: #2C3E50;
+    margin: 0 0 20px 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.category-emoji {
+    font-size: 22px;
+}
+
+.category-count {
+    background: #F5F5F5;
+    padding: 2px 10px;
+    border-radius: 12px;
+    font-size: 13px;
+    color: #999;
+    font-weight: 500;
+}
+
+/* Tasks List */
+.tasks-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+/**
+ * Individual task item styling
+ */
+.task-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 16px 20px;
+    background: #F9F9F9;
+    border: 2px solid #F0F0F0;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.task-item:hover {
+    background: #F5F5F5;
+    border-color: #E0E0E0;
+    transform: translateX(5px);
+}
+
+.task-item.completed {
+    opacity: 0.6;
+}
+
+.task-item.completed .task-title {
+    text-decoration: line-through;
+    color: #999;
+}
+
+/* Checkbox Styling */
+.task-checkbox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.checkbox-input {
+    display: none;
+}
+
+.checkbox-label {
+    width: 24px;
+    height: 24px;
+    border: 2px solid #DDD;
+    border-radius: 6px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.checkbox-input:checked + .checkbox-label {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-color: transparent;
+}
+
+.checkbox-input:checked + .checkbox-label::after {
+    content: '✓';
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* Task Content */
+.task-content {
+    flex: 1;
+    min-width: 0;
+}
+
+.task-title {
+    font-size: 15px;
+    font-weight: 500;
+    color: #2C3E50;
+    margin: 0 0 6px 0;
+    word-break: break-word;
+}
+
+.task-meta {
+    display: flex;
+    gap: 15px;
+    font-size: 13px;
+    color: #999;
+}
+
+.task-date,
+.task-priority {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+/* Task Actions */
+.task-actions {
+    display: flex;
+    gap: 8px;
+}
+
+.btn-action {
+    width: 36px;
+    height: 36px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    font-size: 14px;
+}
+
+.btn-delete {
+    background: #FFE0E0;
+    color: #D32F2F;
+}
+
+.btn-delete:hover {
+    background: #D32F2F;
+    color: white;
+    transform: scale(1.05);
+}
+
+/* Completed Tasks Group */
+.completed-group {
+    margin-top: 40px;
+    padding-top: 30px;
+    border-top: 2px dashed #E0E0E0;
+}
+
+.completed-group .task-item {
+    opacity: 0.7;
+}
+
+/* Clear Completed Button */
+.btn-clear-completed {
+    width: 100%;
+    padding: 16px;
+    background: #F5F5F5;
+    border: 2px dashed #DDD;
+    border-radius: 10px;
+    color: #999;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 20px;
+}
+
+.btn-clear-completed:hover {
+    background: #FFE0E0;
+    border-color: #D32F2F;
+    color: #D32F2F;
+}
+
+/* ==================== FOOTER ==================== */
+/**
+ * Footer styling
+ */
+.footer-custom {
+    background: #2C3E50;
+    color: white;
+    padding: 30px 20px;
+    text-align: center;
+    margin-top: 60px;
+}
+
+.footer-content p {
+    margin: 5px 0;
+    opacity: 0.8;
+}
+
+/* ==================== RESPONSIVE DESIGN ==================== */
+@media (max-width: 768px) {
+    .navbar-custom {
+        padding: 15px 20px;
+    }
+
+    .nav-container {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav-links {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .planner-header {
+        padding: 40px 20px;
+    }
+
+    .page-title {
+        font-size: 28px;
+    }
+
+    .add-task-section,
+    .tasks-section {
+        padding: 25px;
+    }
+
+    .section-title {
+        font-size: 22px;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+
+    .stats-section {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .task-item {
+        flex-direction: column;
+        text-align: left;
+    }
+
+    .task-actions {
+        width: 100%;
+        justify-content: flex-end;
+    }
+
+    .filter-buttons {
+        gap: 8px;
+    }
+
+    .filter-btn {
+        padding: 8px 16px;
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar-custom {
+        padding: 10px 15px;
+    }
+
+    .nav-brand {
+        font-size: 16px;
+    }
+
+    .nav-links {
+        gap: 10px;
+        font-size: 12px;
+    }
+
+    .nav-links a {
+        padding: 5px 8px;
+    }
+
+    .page-title {
+        font-size: 20px;
+    }
+
+    .page-subtitle {
+        font-size: 13px;
+    }
+
+    .planner-header {
+        padding: 30px 15px;
+    }
+
+    .add-task-section,
+    .tasks-section {
+        padding: 20px;
+    }
+
+    .section-title {
+        font-size: 18px;
+    }
+
+    .form-control-custom {
+        padding: 12px 14px;
+        font-size: 14px;
+    }
+
+    .btn-add-task {
+        padding: 12px 16px;
+        font-size: 14px;
+        height: 44px;
+    }
+
+    .stats-section {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .stat-card {
+        padding: 20px;
+    }
+
+    .stat-number {
+        font-size: 28px;
+    }
+
+    .task-item {
+        padding: 12px 15px;
+        font-size: 14px;
+    }
+
+    .task-title {
+        font-size: 14px;
+    }
+
+    .task-meta {
+        font-size: 12px;
+    }
+
+    .empty-state {
+        padding: 50px 20px;
+    }
+
+    .empty-icon {
+        font-size: 60px;
+    }
+
+    .empty-state h3 {
+        font-size: 18px;
+    }
+
+    .empty-state p {
+        font-size: 13px;
+    }
+}
+
+/* ==================== FOOTER SECTION ==================== */
+/**
+ * Professional footer with multiple columns
+ * Includes branding, links, contact, and newsletter
+ */
+.footer-travel {
+    background-color: #2C3E50;
+    color: white;
+    padding: 60px 20px 20px;
+    margin-top: 60px;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    margin-bottom: 40px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.footer-column h3,
+.footer-column h4 {
+    margin: 0 0 20px 0;
+    font-weight: 600;
+    color: #D4A574;
+    font-size: 18px;
+}
+
+.footer-column h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer-column p {
+    margin: 10px 0;
+    opacity: 0.8;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-column ul li {
+    margin: 10px 0;
+}
+
+.footer-column ul li a {
+    color: white;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    opacity: 0.8;
+    font-size: 14px;
+}
+
+.footer-column ul li a:hover {
+    opacity: 1;
+    color: #D4A574;
+    padding-left: 5px;
+}
+
+/* Footer Social Media Links */
+.footer-social {
+    display: flex;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.footer-social a {
+    color: white;
+    font-size: 18px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(212, 165, 116, 0.2);
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.footer-social a:hover {
+    background-color: #D4A574;
+    color: white;
+    transform: translateY(-3px);
+}
+
+/* Newsletter Form in Footer */
+.newsletter-form-footer {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.newsletter-form-footer input {
+    flex: 1;
+    padding: 12px 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    outline: none;
+    transition: all 0.3s ease;
+    font-family: 'Poppins', sans-serif;
+}
+
+.newsletter-form-footer input::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.newsletter-form-footer input:focus {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.newsletter-form-footer button {
+    padding: 12px 20px;
+    background-color: #D4A574;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.newsletter-form-footer button:hover {
+    background-color: #E8B4A0;
+    transform: translateY(-2px);
+}
+
+/* Footer Bottom */
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 20px;
+    text-align: center;
+    opacity: 0.8;
+    font-size: 13px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.footer-bottom a {
+    color: #D4A574;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.footer-bottom a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Footer */
+@media (max-width: 768px) {
+    .footer-travel {
+        padding: 40px 20px 20px;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        margin-bottom: 30px;
+    }
+
+    .footer-column h3,
+    .footer-column h4 {
+        font-size: 16px;
+    }
+
+    .newsletter-form-footer {
+        flex-direction: column;
+    }
 }
