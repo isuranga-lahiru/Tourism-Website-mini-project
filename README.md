@@ -119,8 +119,8 @@
 
 ```
 Tourism Website Mini Project/
-├── Home page.html                    # Landing page with hero slider
-├── Home page.css                     # Main stylesheet (980 lines)
+├── index.html                       # Landing page with hero slider
+├── styles.css                       # Main stylesheet (980 lines)
 ├── footer.css                        # Standardized footer styles
 ├── logo.png                          # Brand logo
 ├── train.jpg, img2-6.jpg            # Hero background images
@@ -174,7 +174,7 @@ Tourism Website Mini Project/
    ```
 
 3. **Open in browser** (one of the following methods)
-   - Double-click `Home page.html`
+   - Double-click `index.html`
    - Right-click → Open with → Browser
    - Use VS Code Live Server extension
    - Deploy to web server (optional)
@@ -185,7 +185,7 @@ Tourism Website Mini Project/
 ```bash
 # Using VS Code Live Server
 1. Install "Live Server" extension
-2. Right-click Home page.html
+2. Right-click index.html
 3. Select "Open with Live Server"
 4. Browser opens to http://localhost:5500
 ```
@@ -194,7 +194,7 @@ Tourism Website Mini Project/
 
 ## 📄 Pages & Descriptions
 
-### 1. Home Page (`Home page.html`)
+### 1. Home Page (`index.html`)
 **Purpose:** Primary landing page and entry point  
 **Key Sections:**
 - Sticky header with navigation
@@ -461,7 +461,7 @@ Tourism Website Mini Project/
 ## 🎓 Development Notes
 
 ### CSS Architecture
-- **Single Master Stylesheet:** `Home page.css` (980 lines)
+- **Single Master Stylesheet:** `styles.css` (980 lines)
 - **CSS Variables** for theming and maintenance
 - **Mobile-First Responsive Design** with media queries at 768px and 480px
 - **Semantic HTML5** structure
