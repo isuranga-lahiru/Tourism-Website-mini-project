@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300&display=swap" rel="stylesheet">
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="keywords" content="travel sri lanka,sri lanka,sri lanka tourism,sri lanka tour,travel to sri lanka,visit sri lanka,visit sri lanka holidays,trip to srilanka,tourist in sri lanka,sri lanka travel and tours,lanka holidays,tours in sri lanka,travel and tours,about sri lanka,travel websites,srilankan,srilanka,sri lanka tourist board,Hotelsflights,Resorts,Locations,cheap flights,low cost,online booking,luxury hotels,beach hotels,air tickets,resort and spa,5 star hotels,zoo,Sri Lanka Tourism,sri lanka turismo,Sri Lanka turismo,Srí Lanka cestovního ruchu,Sri Lanka matkailu,luxury holidays, luxury holidays in asia, holiday cottages, luxury beach holidays, holiday plans, holiday planning, holiday plans asia, holiday plans sri lanka, Asian Holiday destinations, Best Destinations, wonderful destinations, popular destinations,sri lanka vacation,sri lanka tourism,sri lanka honeymoon,Sri Lanka Hotels,sri lanka resorts,sri lanka tourist attractions,sri lankan airlines,srilanka tour packages,Colombo,Kandy,Negambo,Galle,Unawatuna,Hikkaduwa,NuweraEliya,Tangalle,Bentota,Arugambay,Kalpitiya,Mirissa,Passikudah,travel agents,cheap hotels in sri lanka,flights to sri lanka,sri lanka beach,cheap tickets to sri lanka,hotels in Colombo,european holidays,last minute holidays,asia vacation packages,asia tour packages,tour of asia,asia travel deals,trips to asia,cheap asia flights,travel in asia">
+    <title>Pearl of the Indian Ocean</title>
+  <link rel="stylesheet" href="Home page.css" type="text/css">
+  <link rel="stylesheet" href="search.css" >
+  <link rel="stylesheet" href="footer.css">
+
+  <style>
+      body {
+                display: block;
+                margin: 0px;
+                margin-top: 0px;
+                margin-right: 0px;
+                margin-bottom: 0px;
+                margin-left: 0px;}
+
+                *{
+                    font-family: tahoma;
+                    box-sizing: border-box;
+                    color:#333;
+                    font-size: 100%;
+                    line-height:1.5;
+                }
+                nav{
+                    --duration:.5s;
+                    --easing:ease-in-out;
+                    position: relative;
+                    width: 279px;
+                    margin: 20px;
+                }
+                nav ol{
+                    list-style: none;
+                    margin: 0;
+                    padding: 0;
+                }
+                nav li{
+                    margin: -4px 0 0 0;
+                }
+                nav a{
+                    display: block;
+                    text-decoration: none;
+                    background: white;
+                    transform-origin: 0 0;
+                    transition: transform var(--duration)  var(--easing), color var(--duration)  var(--easing);
+                    transition-delay: var(--delay-out);
+                    border-radius:4px;
+                    padding: 1em 1.52em;
+                }
+                nav a:hover{
+                    background: #efefef;
+                }
+                nav .sub-menu a{
+                    font-size: .9em;
+                    color: #666666;
+                    border-left:2em solid white;
+                    padding:.75em;
+                    background: linear-gradient(to right,#dddddd 2px,#efefef 2px);
+                }
+                nav header{
+                    font-weight: 600;
+                    display: block;
+                    background: rgba(255,255,0.5);
+                    transform-origin: 0 0;
+                    transition: var(--duration)  var(--easing), color var(--duration)  var(--easing);
+                    border-radius: 4px;
+                    padding: 1em 1.52em;
+                }
+                nav header span{
+                    border: none;
+                    background: transparent;
+                    font-size: 1.5em;
+                    padding: 0;
+                    cursor: pointer;
+                    line-height: 1;
+                    float: right;
+                }
+                nav footer button {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    border: none;
+                    padding: calc(1em - 2px);
+                    width: 100%;
+                    transform-origin: 0 0;
+                    transition: transform var(--duration) var(--easing);
+                    transition-delay: calc(var(--duration) + (.1s * (var(--count) / 2)));
+                    cursor: pointer;
+                    outline: none;
+                    background: #cdcdcd;
+                    opacity: 0;
+                }
+                nav.closed a,
+                nav.closed header {
+                 transform: translateY(calc(var(--top) * -1)) scaleY(0.1) scaleX(0.2);
+                transition-delay: var(--delay-in);
+                 color: transparent;
+                }
+                nav.closed footer button {
+                transition-delay: 0s;
+                transform: scaleY(0.7) scaleX(0.2);
+                }
+
+  </style>
+</head>
+<body>
+    <div id="container" >
+
+        <div id="logo">
+            <img src="./logo.png">
+        </div>
+
+    </div>
+    <div class="search">
+        <div class="icon"></div>
+        <div class="input">
+            <input type="text" placeholder="Search Your Province" id="mysearch">
+        </div>
+        <span class="clear" onclick="document.getElementById('mysearch').value = ''"></span>
+    </div>
+    
+    <script>
+        const icon = document.querySelector('.icon');
+        const search = document.querySelector('.search');
+        icon.onclick = function(){
+            search.classList.toggle('active')
+        }
+    </script>
+    <!-- socialmedia-->
+
+    <div class="soicalmedia">
+        <ul>
+            <li><a href="https://www.linkedin.com/in/isuranga-lahiru-20a75a228/"><img src="https://img.icons8.com/color/48/000000/linkedin.png"/></a></li>
+            <li><a href="https://www.facebook.com/"><img src="https://img.icons8.com/fluency/48/000000/facebook-new.png"/></a></li>
+            <li><a href="https://www.pinterest.com/"><img src="https://img.icons8.com/ios/50/000000/pinterest--v4.png"/></a></li>
+            <li><a href="https://www.instagram.com/?hl=en"><img src="https://img.icons8.com/color/48/000000/instagram-new--v1.png"/></a></li>
+            <li><a href="https://twitter.com/?lang=en"><img src="https://img.icons8.com/fluency/48/000000/twitter.png"/></a></li>
+
+        </ul>
+    </div> 
+
+    <div class="overlay">
+
+    </div>
+    <div class="navbar">
+
+        <nav class="menu">
+            <header>Menu <span>x</span></header>
+            <ol>
+                <li class="menu-item"><a href="">Home</a></li>
+                <li class="menu-item"><a href="./information/Information.html">Information</a>
+                    <li class="menu-item">
+                    <a href="./ToDoList/ToDo List.html">To Do List </a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="./Contact Us/contactus.html">Contact Us</a>
+                    </li>
+                    <li class="menu-item"><a href="./About/About Us.html">About us</a></li>
+                    
+            </ol>
+        
+            <footer><button aria-label="Toggle Menu">Toggle</button></footer>
+            </nav>
+    </div>
+    <div class="paradise">
+
+        <h1>Sri Lanka – Wonder of Asia</h1>
+        <p1>Sri Lanka is a tear drop shape island rich with Endless Golden beaches, timeless ruins, warm hospitality and smiles of people, misty mountains and hill country, mighty elephants, stealthy leopards, giant whales, breathtaking sceneries.
+            <br>
+            <br>
+        The smiles and hospitality of Sri Lanka id world famous and so are its spicy food, exotic fruits and array of sweetmeats found nowhere in the world. With so many cultures living next to each other life in Sri Lanka continues among a series of festivities throughout the year, an ideal recipe for fun and leisure.
+        <br>
+        With many sites and scenes bottled up in to a small island, a traveler could be riding the waves in the dawn and admiring the green carpeted mountains by dusk. Travel destinations in Sri Lanka provide an array of holiday experience from sun kissed beach holidays to a marathon of wildlife watching, adrenaline pumping adventure sports and pilgrimage to some of the oldest cities in the world.
+        <br>
+        <br>
+        Sri Lanka is a small miracle partly due to the compact physical diversity of this pearl-shaped island – but, as we shall see, this diversity extends to virtually every aspect of life. Fringed by variously-shaped sublime beaches, from straight expanse to rocky cove, the island possesses a coastal plain containing a host of geographic features such as lagoons, wetlands, rivers and various types of wildlife-rich jungle.
+        <br>
+        <br>
+        The plain ends in the central area where the land starts to ascend into mist-shrouded mountains, covered in forests of wind-stunted trees (in fact there are seven different types of forest in Sri Lanka), plains known as patanas, and rolling tea plantations. In addition, the hillsides are invariably punctuated by dramatic waterfalls. For its size Sri Lanka has perhaps the largest number of waterfalls of any country.
+        <br>
+        <br>
+        <br>
+        This little exotic island is abundant with marvelous discoveries for any tourist.
+    </p1>
+    </div>
+
+    <!-- slider -->
+    
+<section id="slider1">
+    <div class="slider">
+
+        <div class="slides">
+            <input type="radio" name="radio.btn" id="radio1">
+            <input type="radio" name="radio.btn" id="radio2">
+            <input type="radio" name="radio.btn" id="radio3">
+            <input type="radio" name="radio.btn" id="radio4">
+            <input type="radio" name="radio.btn" id="radio5">
+            <input type="radio" name="radio.btn" id="radio6">
+            <!--radio buttons end-->
+            <!--slider images start-->
+    
+            <div class=" slide first">
+                <img src="./Slider/s img1.jpg" alt="">
+            </div>
+            <div class=" slide">
+                <img src="./Slider/s img2.jpg" alt="">
+            </div>
+            <div class=" slide">
+                <img src="./Slider/s img3.jpg" alt="">
+            </div>
+            <div class=" slide">
+                <img src="./Slider/s img4.jpg" alt="">
+            </div>
+            <div class=" slide">
+                <img src="./Slider/s img5.jpg" alt="">
+            </div>
+            <div class=" slide">
+                <img src="./Slider/s img6.jpg" alt="">
+            </div>
+             <!-- slide image end -->
+             <!-- automatic navigation start -->
+    
+            <div class="navigation-auto">
+                <div class="auto-btn1"></div>
+                <div class="auto-btn2"></div>
+                <div class="auto-btn3"></div>
+                <div class="auto-btn4"></div>
+                <div class="auto-btn5"></div>
+                <div class="auto-btn6"></div>
+            </div>
+            <!-- automatic navigation end -->
+        </div>
+         <!-- manual navigation start -->
+         <div class="navigation-manual">
+             <label for="radio1" class="manual-btn"></label>
+             <label for="radio2" class="manual-btn"></label>
+             <label for="radio3" class="manual-btn"></label>
+             <label for="radio4" class="manual-btn"></label>
+            <label for="radio5" class="manual-btn"></label>
+             <label for="radio6" class="manual-btn"></label>
+         </div>
+    </div>
+
+    <footer class="foot" style="margin-top:100px">
+       <div class="row">
+         <div class="col">
+             <img src="" class="">
+             <p></p>
+
+         </div>
+         <div class="col">
+             <h3 style="color: rgb(17, 17, 17);">Contact us<div class="underline"><span></span></div></h3>
+             <p style="color: black;">No.05,</p>
+             <p style="color: black;">Colombo road,</p>
+             <p style="color: black;">Gampaha.</p>
+             <p class="email-id" style="color: black;">isurangalahiru1@gmail.com</p>
+             <h4 style="color: black;">+942314335</h4>
+
+         </div>
+         <div class="col">
+            <h3 style="color: black;">Links<div class="underline"><span></span></div></h3>
+            <ul class="ful">
+                <li><a href="./Home page.html">Home</a></li>
+            
+                <li><a href="./information/Information.html">Information</a></li>
+               
+                <li><a href="./ToDoList/ToDo List.html">To Do List</a></li>
+               
+                <li><a href="./Contact Us/contactus.html">Contact us</a></li>
+                
+                <li><a href="./About/About Us.html">About us</a></li>
+                
+             </ul>
+
+         </div>
+         <div class="col">
+            <h3 style="color: black;">Newslatter<div class="underline"><span></span></div></h3>
+            <form>
+                <i class="far fa envelope"></i>
+                 <input type="email" placeholder="Enter your email ID" required>
+                 <button type="submit"><i class="far fa-arrow-right"></i></button>
+             </form>
+     </div>
+     <hr>
+     <p class="copyright" style="color: #efefef;">Pearl of the Indian Ocean ©️
+        2021 - All Rights reserved</p>
+      </footer>
+
+    
+    <script type="text/javascript">
+        var counter=1;
+        setInterval(function(){
+            document.getElementById('radio' + counter).checked=true;
+            counter++;
+            if(counter > 6){
+                counter=1;
+            }
+        },5000);
+        </script>
+    </section>
+
+        <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script>
+        
+    var $els = $('.menu a, .menu header');
+    var count = $els.length;
+    var grouplength = Math.ceil(count/3);
+    var groupNumber = 0;
+    var i = 1;
+    $('.menu').css('--count',count+'');
+    $els.each(function(j){
+        if ( i > grouplength ) {
+            groupNumber++;
+            i=1;
+        }
+        $(this).attr('data-group',groupNumber);
+        i++;
+    });
+
+    $('.menu footer button').on('click',function(e){
+        e.preventDefault();
+        $els.each(function(j){
+            $(this).css('--top',$(this)[0].getBoundingClientRect().top + ($(this).attr('data-group') * -15) - 20);
+            $(this).css('--delay-in',j*.1+'s');
+            $(this).css('--delay-out',(count-j)*.1+'s');
+        });
+        $('.menu').toggleClass('closed');
+        e.stopPropagation();
+    });
+
+    // run animation once at beginning for demo
+    setTimeout(function(){
+        $('.menu footer button').click();
+        /*setTimeout(function(){
+            $('.menu footer button').click();
+        }, (count * 100) + 500 );*/
+    }, 1000);
+    
+        
+    </script>
+        
+
+</body>
+</html>

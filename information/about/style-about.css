@@ -1,0 +1,168 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+/*nav*/
+
+nav{
+    position: fixed;
+    width: 100%;
+    height: 80px;
+    top: 0;
+    left: 0;
+    background-color:rgba(0, 0,0, 0.4);
+    box-sizing: border-box;
+    border-bottom: 1px solid #fff;
+    
+}
+
+nav ul{
+    top: 50%;
+    list-style-type: none;
+    overflow: hidden;
+}
+nav ul li{
+    float: left;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav li a{
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    border-radius: 20px;
+    text-decoration: none;
+}
+
+
+li a:hover{
+    background-color: rgba(0, 0,0, 0.2);
+    cursor: pointer;
+}
+/*grid*/
+.container{
+    display: grid;
+    height: 500px;
+    grid-template-rows: 20% 70% 10%;
+}
+
+.about{
+    grid-row: 2/3;
+}
+
+.about h4{
+    padding: 5px;
+    color: #000;
+    font-family:  'Arial Narrow';
+    font-size: 27px;
+}
+
+.about p{
+    text-align: center;
+}
+
+#header{
+    font-size: 24px;
+    background: linear-gradient(45deg ,#00004d, #000033,#00001a);
+    color: #fff;
+}
+
+#content{
+    position: absolute;
+    width: 500px;
+    left: 500px;
+    font-size: 17px;
+    padding-top: 30px;
+}
+/*footer*/
+
+.footer{
+    margin: 0;
+    width: 100%;
+    height: auto;
+    background-color: rgb(0,0,0);
+    color: #fff;
+    padding-top: 0;
+}
+
+
+h4{
+    margin: 0;
+    padding: 0;
+    border-bottom:1px solid white ;
+}
+
+.footer_cnt{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.social{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+}
+
+.footer li{
+    float: left;
+    font-size: 24px;
+    padding: 10px;
+    margin: 0 10px;
+}
+
+.social a{
+    text-decoration: none;
+    color: #fff;
+}
+
+.social a{
+    text-decoration: none;
+    color: #fff;
+}
+
+#facebook :hover{
+    color: #0000e6;
+}
+
+#twitter :hover{
+    color:  #80e5ff;
+}
+
+#linkedin :hover{
+    color: #66b3ff;
+}
+
+#reddit :hover{
+    color: #ff944d;
+}
+
+.footer_bttm{
+    text-align: center;
+}
+
+p{
+    margin: 0;
+    padding: 20px;
+    font-size: 14px;
+    word-spacing: 2px;
+    text-transform: capitalize;
+}
+
+h4{
+    padding: 40px;
+    font-family: 'sans-serifS';
+    font-size: 20px;
+    color: #fff;  
+    text-align: center;
+}
+
+.footer_bttm span{
+    text-transform: uppercase;
+    opacity: 0.5;
+}

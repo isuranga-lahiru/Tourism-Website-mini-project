@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact us</title>
+    <link rel="stylesheet" href="./contactus.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="../Home page.html">Home</a></li>
+            <li><a href="../information/Information.html">Information</a></li>
+            <li><a href="../ToDoList/ToDo List.html">To do List</a></li>
+            <li><a href="../Contact Us/contactus.html">Contact us</a></li>
+            <li><a href="../About/About Us.html">About us</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <div style="text-align:center">
+          <h2>Contact Us</h2>
+          <b><h3>Pearl of Indian Ocean</h3></b>
+        </div>
+        <div class="row">
+          <div class="column">
+            <img src="./contact us.jpg" style="width:100%; height: 650px;">
+          </div>
+          <div class="column">
+            <form action="/action_page.php">
+              <label for="fname">First Name</label>
+              <input type="text" id="fname" name="firstname" placeholder="Your name..">
+              <label for="lname">Last Name</label>
+              <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+              <label for="country">Province</label>
+              <select id="country" name="Province">
+                <option value="Southern">Southern</option>
+                <option value="Nothern">Nothern</option>
+                <option value="North Central">North Central</option>
+                <option value="Sabaragamuwa">Sabaragamuwa</option>
+                <option value="Uwa">Uwa</option>
+                <option value="Wyamba">Wyamba</option>
+                <option value="Western">Western</option>
+                <option value="Eastern">Eastern</option>
+                <option value="Central">Central</option>
+              </select>
+              <label for="subject">Subject</label>
+              <textarea id="subject" name="subject" placeholder="Write something.." style="height:170px"></textarea>
+              <input type="submit" value="Submit">
+            </form>
+          </div>
+        </div>
+      </div>
+</body>
+</html>

@@ -1,0 +1,40 @@
+/*navigation bar*/
+
+nav{
+    position: fixed;
+    width: 100%;
+    height: 80px;
+    top: 0;
+    left: 0;
+    background-color:rgba(0, 0,0, 0.4);
+    box-sizing: border-box;
+    border-bottom: 1px solid #fff;
+    z-index: 1;
+    
+}
+nav ul{
+    top: 50%;
+    list-style-type: none;
+    overflow: hidden;
+}
+
+nav ul li{
+    float: left;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav li a{
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    border-radius: 20px;
+    text-decoration: none;
+}
+
+
+li a:hover{
+    background-color: rgba(0, 0,0, 0.2);
+    cursor: pointer;
+}
